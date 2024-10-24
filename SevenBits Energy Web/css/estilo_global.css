@@ -92,10 +92,10 @@ nav ul li a:hover {
 }
 
 .search-container input {
-    padding: 0px;
+    padding: 10px;
     border-radius: 24px;
     border: none;
-    margin-right: 25px;
+    margin-right: 20px;
 }
 
 .search-container button {
@@ -117,9 +117,10 @@ nav ul li a:hover {
 /* Estilo de la imagen de inicio de sesión de todas las páginas (Energía, inicio, país, búsqueda)*/
 
 .profile-icon {
-    width: 26px;
-    height: 26px;
-    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
+    margin-right: 10px;
 }
 
 

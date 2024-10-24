@@ -45,7 +45,7 @@ body{
 
 
 .container p{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
@@ -62,7 +62,7 @@ body{
 /* Estilo de las opciones de inicio de sesión" (Página de inicio de sesión) */
 
 .container a{
-    color: #000000;
+    color: #ffffff;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
