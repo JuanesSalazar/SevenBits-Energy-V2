@@ -1,0 +1,107 @@
+
+<!--        ***************************** PÁGINA DE INICIO *****************************        -->
+
+
+<!-- Nombramos la página, establecemos el ícono de pestaña y llamamos a los archivos de estilos (css)  -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head> <!-- EMPIEZA CABEZA -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energías Renovables - País</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon"> <!-- Importo el icono de la página -->
+    <link rel="stylesheet" href="css/inicio.css"> <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. Inicio) -->
+    <link rel="stylesheet" href="css/estilo_global.css"> <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
+    <link rel="stylesheet" href="css/inicio_responsive.css"> <!--Importo el archivo CSS correspondiente al diseño responsivo (pág.Inicio)-->
+</head> <!-- CIERRA CABEZA -->
+
+    <!-- Aquí se añadirá el contenido de la página -->
+
+
+<body> <!-- EMPIEZA CUERPO -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="7Bits Energy Logo">
+            <h1>SEVENBITS ENERGY</h1>
+        </div>
+        <!--  -->
+        <nav>
+            <ul>
+                <li><a href="inicio.html" class="active">Inicio</a></li>
+                <li><a href="energia_renovable.html" >Energías renovables</a></li>
+                <li><a href="paises.html">Regiones y países</a></li>
+            </ul>
+        </nav>   
+        <!--  -->     
+        <div class="search-container">
+            <input type="text" placeholder="Buscar" id="search-input">
+            <button id="search-button"><img src="images/search-icon.png" alt="Buscar"></button>
+            <a href="iniciar_sesion.html"><img class="profile-icon" src="images/profile-icon.png" alt="Perfil"></a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Producción y consumo de energía a nivel global</h2>
+            <p>Accede a datos relevantes sobre energías renovables a nivel mundial.</p>
+        </section>
+
+        <section class="charts">
+            <br><br><h3>Producción total de energía por tipo a nivel global</h3>
+            <canvas id="energyProductionChart"></canvas>
+
+            <h3>Consumo total de energía por tipo a nivel global</h3>
+            <canvas id="energyConsumptionChart"></canvas>
+        </section>
+
+        <section class="quick-access">
+            <p><strong><h3>Acceso Rápido</h3></strong></p>
+            
+            <ul>
+                <li><a href="energia_renovable.html">Consulta Energías Renovables</a></li>
+                <li><a href="paises.html">Consulta por País</a></li>
+            </ul>
+        
+        </section>
+
+        <section class="news">
+            <h3>Últimas Noticias sobre Energía Renovable</h3>
+            <div class="news-item">
+                <img src="news1.jpg" alt="Noticia 1">
+                <a href="link-a-noticia1.html">Título de la noticia 1</a>
+            </div>
+            <div class="news-item">
+                <img src="news2.jpg" alt="Noticia 2">
+                <a href="link-a-noticia2.html">Título de la noticia 2</a>
+            </div>
+            <div class="news-item">
+                <img src="news3.jpg" alt="Noticia 3">
+                <a href="link-a-noticia3.html">Título de la noticia 3</a>
+            </div>
+        </section>
+
+        <section class="references">
+            <h3>Referentes en Energía Renovable</h3>
+            <ul>
+                <li><a href="https://www.irena.org/" target="_blank">IRENA</a></li>
+                <li><a href="https://www.nrel.gov/" target="_blank">NREL</a></li>
+                <li><a href="https://www.worldenergy.org/" target="_blank">World Energy Council</a></li>
+            </ul>
+        </section>
+    </main>
+<br><br>   
+
+<footer>
+    <p>&copy; 2024 SevenBits Energy. Todos los derechos reservados.</p>
+</footer>
+
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+    <div class="arrow">&#8679;</div>
+</div>
+
+<script src="js/script_global.js"></script> <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
+<script src="js/inicio.js"></script> <!-- Importo el archivo JS (Pág. Inicio)-->
+</body> <!-- CIERRA CUERPO -->
+</html> <!-- CIERRA HTML -->

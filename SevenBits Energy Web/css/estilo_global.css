@@ -1,0 +1,183 @@
+/*       ***************************** CUALQUIER PÁGINA (Energía, inicio, país, búsqueda) *************************************          */
+
+
+/* Estilos globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilo del cuerpo de todas las páginas (Energía, inicio, país, búsqueda) */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5;
+    color: #273c27;
+}
+
+/*Estilo de la barra de navegación de todas las páginas (Energía, inicio, país, búsqueda) */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b461b;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #2b461b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s;
+}
+
+/* Subraya la página en la que se encuentra el usuario (páginas Energía, inicio, país, búsqueda) */
+
+nav ul li a.active {
+    text-decoration: underline;
+    font-weight: bold; 
+}
+
+/* Estilo del logo de todas las páginas (Energía, inicio, país, búsqueda)*/
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h1 {
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+/* Estilo de listado  de todas las páginas (Energía, inicio, país, búsqueda)*/
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #e3e3db;
+    color: #273c27;
+    border-radius: 5px;
+}
+
+/* Estilo del cuadro y botón de búsqueda de todas las páginas (Energía, inicio, país, búsqueda)*/
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 24px;
+    border: none;
+    margin-right: 20px;
+}
+
+.search-container button {
+    position: relative;
+    right: 59px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button img {
+    width: 25px;
+    height: 25px;
+    align-content: center;
+    padding-top: 15%;
+}
+
+
+/* Estilo de la imagen de inicio de sesión de todas las páginas (Energía, inicio, país, búsqueda)*/
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+
+/* Estilo del scroll hacia arriba de todas las páginas (Energía, inicio, país, búsqueda)*/
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #4b5e30;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #3a4b1f;
+}
+
+.arrow {
+    font-size: 24px;
+    color: white;
+}
+
+/* Estilo del footer de todas las páginas (Energía, inicio, país, búsqueda) */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #263f18;
+    color: white;
+    font-size: 14px;
+}
+
+/* Media query para hacer la barra de navegación responsiva */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-container input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

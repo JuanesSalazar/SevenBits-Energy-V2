@@ -1,0 +1,113 @@
+
+/*       ***************************** PÁGINA DE PAÍSES Y REGIONES *****************************       */
+
+
+/* Estilo de la tabla correspondiente a los continentes (página País) */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+}
+
+/* Estilo del filtrado correspondiente a los continentes (página País) */
+
+.country-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.country-list a {
+    background-color: #547442; /* Fondo suave, relacionado con el tema de renovables */
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.country-list a:hover {
+    background-color: #4b5e30; /* Color más vibrante para el hover */
+}
+
+.country-info {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de texto de los continentes (página País) */
+
+
+h2 {
+    margin: 2%;
+    color: #435825;
+    text-align: center;
+}
+
+.info-section {
+    margin: 20px 0;
+    color: black;
+}
+
+.info-section h3 {
+    color: #1c3f07;
+}
+
+/* Estilo de la tabla correspondiente al resultado de producción y consumo de los continentes (página País) */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fcfcfc;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #96b683;
+    ;
+}
+
+/* Estilo para el formulario de filtrado correspondiente a los continentes (página País) */
+
+.filter-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-form label {
+    margin-right: 10px;
+}
+
+.filter-form select, .filter-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-form button {
+    background-color: #2b461b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-form button:hover {
+    background-color: #2b461b;
+}
+

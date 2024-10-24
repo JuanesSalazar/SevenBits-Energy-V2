@@ -1,0 +1,156 @@
+<!--        ***************************** PÁGINA DE ENERGÍA RENOVABLE  *****************************        -->
+
+
+<!-- Nombramos la página, establecemos el ícono de pestaña y llamamos a los archivos de estilos (css)  -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head> <!-- EMPIEZA CABEZA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevenBits Energy</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon"> <!-- Importo el icono de la página -->
+    <link rel="stylesheet" href="css/energia_renovable.css"> <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. Energía renovable) -->
+    <link rel="stylesheet" href="css/estilo_global.css"> <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
+    <link rel="stylesheet" href="css/energia_renovable_responsive.css"><!--Importo el archivo CSS correspondiente al diseño responsivo (pág. Energía renovable)-->
+</head> <!-- CIERRA CABEZA -->
+
+<!-- Aquí se añadirá el contenido de la página -->
+
+<body> <!-- EMPIEZA CUERPO -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="7Bits Energy Logo">
+            <h1>SEVENBITS ENERGY</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="energia_renovable.html" class="active">Energías renovables</a></li>
+                <li><a href="paises.html">Regiones y países</a></li>
+            </ul>
+        </nav>        
+        <div class="search-container">
+                <input type="text" placeholder="Buscar">
+                <button><img src="images/search-icon.png" alt="Buscar"></button>
+            <a href="iniciar_sesion.html"><img class="profile-icon" src="images/profile-icon.png" alt="Perfil"></a> <!-- Enlace a iniciar sesión -->
+        </div>
+    </header>
+    <main>
+        <br><br><h1><center>Cálculo de producción y consumo de energía renovable por país.</center></h1>
+        <div class="content">
+            <div class="map-section">
+                <div class="filter-section">
+                    <label for="pais"></label>
+                    <select id="pais">
+                        <option value="">Seleccione un país</option>
+                    </select>
+                    <label for="energia"></label>
+                    <select id="energia">
+                        <option value="">Seleccione energía</option>
+                    </select>
+                    <label for="anio"></label>
+                    <select id="anio">
+                        <option value="">Seleccione un año</option>
+                    </select>
+                    <button id="enviar-btn">Enviar</button>
+                </div>
+                <br>
+                <p>En el <span id="anio-seleccionado">Año*</span> el país <span id="pais-seleccionado">País*</span> generó *****</span> KW en energía <span id="energia-generada"></span>*</p>
+                <div class="image-section">
+                    <img src="images/map.png" alt="Mapamundi">
+                    <img src="images/house.png" alt="Casas">
+                </div>                
+                <p>Lo que equivale a la energía de <span id="casas-equivalente">###</span> casas</p>
+            </div>
+            <div class="ranking-section">
+                <h2>Ranking</h2>
+                <ul>
+                    <?php include 'ranking.php'; ?>
+                </ul>
+            </div>
+        </div>
+
+        <section class="energy-section-interactive">
+            <h2>¿Qué es la energía renovable?</h2>
+            <br>
+            <div class="interactive-container">
+                <div class="info">
+                    <p>La energía renovable se obtiene de fuentes naturales que se regeneran continuamente, como la luz solar, el viento, el agua y la biomasa.</p>
+                    <p><strong>Importancia:</strong> Utilizar energía renovable reduce la dependencia de combustibles fósiles y disminuye las emisiones de gases de efecto invernadero, lo que contribuye al combate contra el cambio climático.</p>
+                    <p><strong>Utilidad:</strong> Las energías renovables son clave para un futuro sostenible, proporcionando energía limpia y accesible a nivel global.</p>
+                </div>
+                <div class="image-container">
+                    <img id="image1" src="images/image1.jpg" alt="Energía Renovable" onmouseover="changeImage()" onmouseout="resetImage()">
+                </div>
+            </div>
+        </section>
+
+        <section class="energy-section">
+            <h2>Energías renovables</h2>
+            <div class="energy-grid">
+                <div class="energy-card">
+                    <h3>Solar</h3>
+                    <p>Energía obtenida a partir de la radiación solar. Paneles solares capturan la energía para convertirla en electricidad.</p>
+                    <ul>
+                        <li>Paneles solares</li>
+                        <li>Clima soleado ideal</li>
+                        <li>Genera electricidad</li>
+                    </ul>
+                </div>
+                <div class="energy-card">
+                    <h3>Eólica</h3>
+                    <p>Energía generada por el movimiento de las turbinas impulsadas por el viento.</p>
+                    <ul>
+                        <li>Velocidad del viento mínima: 15 km/h</li>
+                        <li>Turbinas en zonas abiertas</li>
+                        <li>Sin emisiones de carbono</li>
+                    </ul>
+                </div>
+                <div class="energy-card">
+                    <h3>Biomasa</h3>
+                    <p>Se obtiene de la materia orgánica, como residuos de cultivos o madera, para generar energía.</p>
+                    <ul>
+                        <li>Materia orgánica</li>
+                        <li>Residuos agrícolas</li>
+                        <li>Generación térmica</li>
+                    </ul>
+                </div>
+                <div class="energy-card">
+                    <h3>Geotérmica</h3>
+                    <p>Aprovecha el calor interno de la Tierra para producir electricidad o calefacción.</p>
+                    <ul>
+                        <li>Calor subterráneo</li>
+                        <li>Ideal en zonas volcánicas</li>
+                        <li>Eficiente para calefacción</li>
+                    </ul>
+                </div>
+                <div class="energy-card">
+                    <h3>Hidroeléctrica</h3>
+                    <p>La energía del agua en movimiento se usa para generar electricidad.</p>
+                    <ul>
+                        <li>Generación en represas</li>
+                        <li>Flujo constante de agua</li>
+                        <li>Gran capacidad energética</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SevenBits Energy. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+        <div class="arrow">&#8679;</div>
+    </div>
+    
+    
+    <script src="js/script_global.js"></script> <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
+    <script src="js/energia.js"></script> <!-- Importo el archivo JS (Pág. Energía renovable)-->
+
+</body> <!-- CIERRA CUERPO -->
+</html> <!-- CIERRA HTML -->
