@@ -1,0 +1,221 @@
+
+/*       ***************************** PÁGINA DE ENERGÍA RENOVABLE  *************************************          */
+
+
+/* Estilo del filtrado de país, año y tipo de energía (página Energía renovable)*/
+
+.filter-section {
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px;
+    position: relative; 
+    z-index: 10; 
+
+}
+
+.filter-section label {
+    margin-right: 0px;
+    
+}
+
+.filter-section select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: #4b5e30;
+    color: white;
+    border: #3a4b1f;
+    
+}
+
+.filter-section button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #3a4b1f;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* Estilo del contenedor del cálculo de energía renovable por país (página Energía renovable)*/
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px;
+}
+
+/* Estilo de las imágenes correspondientes al mapamundi y las casas (página Energía renovable)*/
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    align-items: center;
+}
+
+.map-section {
+    width: 60%;
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 30px;
+    border-radius: 18px;
+    border: 5px solid #2b461b; 
+}
+
+.map-section .filter-section {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.house-section {
+    text-align: center;
+}
+
+.house-section img {
+    width: 60px;
+    margin: 10px;
+}
+
+.map-section p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.map-section img {
+    width: 60%;
+    max-width: 320px;
+    margin: 20px 0;
+}
+
+/* Estilo de sección de Ranking (página Energía renovable)*/
+
+.ranking-section {
+    width: 30%;
+    background-color: #3a4b1f;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.ranking-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border-radius: 10px;
+    color: #273c27; 
+}
+
+.ranking-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ranking-section ul li {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de la sección de textos correspondiente a qué es la energía renovable (página Energía renovable)*/
+
+.energy-section-interactive {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.interactive-container {
+    align-content: center;
+    display: flex;
+    flex-direction: row; /* Cambia la dirección a fila para que la imagen y el texto queden uno al lado del otro */
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centra el contenedor */
+    max-width: 900px; /* Define un ancho máximo */
+    width: 90%; /* Permite que el contenedor se ajuste según el ancho de la pantalla */
+}
+
+
+.interactive-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Ajuste de la imagen para que sea más pequeña */
+.image-container img {
+    width: 200px; /* Define un tamaño pequeño para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Añade espacio a la derecha de la imagen */
+}
+
+.info {
+    color: #273c27;
+    font-size: 16px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+
+
+
+
+/* Estilo de sección de energías renovables (página Energía renovable)*/
+
+.energy-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.energy-section h2 {
+    color: #273c27;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.energy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.energy-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.energy-card:hover {
+    transform: translateY(-5px);
+}
+
+.energy-card h3 {
+    color: #3a4b1f;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.energy-card p {
+    color: #273c27;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.energy-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.energy-card ul li {
+    color: #273c27;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+

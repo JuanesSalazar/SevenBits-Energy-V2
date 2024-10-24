@@ -1,0 +1,436 @@
+<!--        ***************************** PÁGINA DE PAÍSES Y REGIONES *****************************        -->
+
+<!-- Nombramos la página, establecemos el ícono de pestaña y llamamos a los archivos de estilos (css)  -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energías Renovables</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon"> <!-- Importo el icono de la página -->
+    <link rel="stylesheet" href="/css/pais.css"> <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. País) -->
+    <link rel="stylesheet" href="/css/estilo_global.css"> <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
+</head> <!-- CIERRA CABEZA -->
+
+<!-- Aquí se añadirá el contenido de la página -->
+
+<body> <!-- EMPIEZA CUERPO -->
+    <!-- Encabezado con logo, menú, búsqueda y icono de perfil -->
+    <header>
+        <div class="logo">
+            <img src="/images/logo.png" alt="7Bits Energy Logo">
+            <h1>SEVENBITS ENERGY</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="energia_renovable.html">Energías renovables</a></li>
+                <li><a href="paises.html" class="active">Regiones y países</a></li>
+            </ul>
+        </nav>        
+        <div class="search-container">
+            <input type="text" placeholder="Buscar">
+            <button><img src="/images/search-icon.png" alt="Buscar"></button>
+            <a href="iniciar_sesion.html"><img class="profile-icon" src="/images/profile-icon.png" alt="Perfil"></a>
+        </div>
+    </header>
+    
+    <div class="container">
+
+    <!-- Tabla para América -->
+<section id="america" class="continent-section">
+    <h2>América</h2>
+    <div class="filter-form">
+        <label for="year-america">Filtrar por año:</label>
+        <select id="year-america">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+        </select>
+        <label for="country-america">Filtrar por país:</label>
+        <select id="country-america">
+            <option value="">Todos</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Canadá">Canadá</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+        </select>
+        <label for="energy-america">Filtrar por tipo de energía:</label>
+        <select id="energy-america">
+            <option value="">Todos</option>
+            <option value="Solar">Solar</option>
+            <option value="Eólica">Eólica</option>
+            <option value="Hidráulica">Hidráulica</option>
+        </select>
+        <button onclick="filterData('america')">Filtrar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Tipos de Energía</th>
+                <th>Producción Total (GWh)</th>
+                <th>Consumo Total (GWh)</th>
+            </tr>
+        </thead>
+        <tbody id="america-data">
+            <tr>
+                <td>Argentina</td>
+                <td>Solar, Eólica, Hidráulica</td>
+                <td>1200</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>Brasil</td>
+                <td>Hidráulica, Solar, Biomasa</td>
+                <td>2800</td>
+                <td>1500</td>
+            </tr>
+            <tr>
+                <td>Canadá</td>
+                <td>Eólica, Hidráulica, Biomasa</td>
+                <td>3200</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>Chile</td>
+                <td>Solar, Eólica, Hidráulica</td>
+                <td>1500</td>
+                <td>900</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>Hidráulica, Solar, Eólica</td>
+                <td>2000</td>
+                <td>1100</td>
+            </tr>
+            <tr class="continent-total">
+                <td>Total por América</td>
+                <td></td>
+                <td id="total-production-america"></td>
+                <td id="total-consumption-america"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Tabla para Europa -->
+<section id="europa" class="continent-section">
+    <h2>Europa</h2>
+    <div class="filter-form">
+        <label for="year-europa">Filtrar por año:</label>
+        <select id="year-europa">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+        </select>
+        <label for="country-europa">Filtrar por país:</label>
+        <select id="country-europa">
+            <option value="">Todos</option>
+            <option value="Alemania">Alemania</option>
+            <option value="Francia">Francia</option>
+            <option value="España">España</option>
+            <option value="Italia">Italia</option>
+            <option value="Reino Unido">Reino Unido</option>
+        </select>
+        <label for="energy-europa">Filtrar por tipo de energía:</label>
+        <select id="energy-europa">
+            <option value="">Todos</option>
+            <option value="Solar">Solar</option>
+            <option value="Eólica">Eólica</option>
+            <option value="Hidráulica">Hidráulica</option>
+        </select>
+        <button onclick="filterData('europa')">Filtrar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Tipos de Energía</th>
+                <th>Producción Total (GWh)</th>
+                <th>Consumo Total (GWh)</th>
+            </tr>
+        </thead>
+        <tbody id="europa-data">
+            <tr>
+                <td>Alemania</td>
+                <td>Eólica, Solar, Biomasa</td>
+                <td>2200</td>
+                <td>1300</td>
+            </tr>
+            <tr>
+                <td>Francia</td>
+                <td>Nuclear, Solar, Eólica</td>
+                <td>5000</td>
+                <td>3500</td>
+            </tr>
+            <tr>
+                <td>España</td>
+                <td>Eólica, Solar, Hidráulica</td>
+                <td>1800</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Italia</td>
+                <td>Solar, Eólica, Biomasa</td>
+                <td>1600</td>
+                <td>950</td>
+            </tr>
+            <tr>
+                <td>Reino Unido</td>
+                <td>Eólica, Solar, Gas Natural</td>
+                <td>2400</td>
+                <td>1800</td>
+            </tr>
+            <tr class="continent-total">
+                <td>Total por Europa</td>
+                <td></td>
+                <td id="total-production-europa"></td>
+                <td id="total-consumption-europa"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Tabla para Asia -->
+<section id="asia" class="continent-section">
+    <h2>Asia</h2>
+    <div class="filter-form">
+        <label for="year-asia">Filtrar por año:</label>
+        <select id="year-asia">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+        </select>
+        <label for="country-asia">Filtrar por país:</label>
+        <select id="country-asia">
+            <option value="">Todos</option>
+            <option value="China">China</option>
+            <option value="India">India</option>
+            <option value="Japón">Japón</option>
+            <option value="Corea del Sur">Corea del Sur</option>
+            <option value="Indonesia">Indonesia</option>
+        </select>
+        <label for="energy-asia">Filtrar por tipo de energía:</label>
+        <select id="energy-asia">
+            <option value="">Todos</option>
+            <option value="Solar">Solar</option>
+            <option value="Eólica">Eólica</option>
+            <option value="Geotérmica">Geotérmica</option>
+        </select>
+        <button onclick="filterData('asia')">Filtrar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Tipos de Energía</th>
+                <th>Producción Total (GWh)</th>
+                <th>Consumo Total (GWh)</th>
+            </tr>
+        </thead>
+        <tbody id="asia-data">
+            <tr>
+                <td>China</td>
+                <td>Solar, Eólica, Carbón</td>
+                <td>9000</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>Solar, Eólica, Biomasa</td>
+                <td>5000</td>
+                <td>4000</td>
+            </tr>
+            <tr>
+                <td>Japón</td>
+                <td>Solar, Eólica, Nuclear</td>
+                <td>4000</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>Corea del Sur</td>
+                <td>Solar, Eólica, Gas Natural</td>
+                <td>3000</td>
+                <td>2500</td>
+            </tr>
+            <tr>
+                <td>Indonesia</td>
+                <td>Geotérmica, Solar, Carbón</td>
+                <td>2500</td>
+                <td>2000</td>
+            </tr>
+            <tr class="continent-total">
+                <td>Total por Asia</td>
+                <td></td>
+                <td id="total-production-asia"></td>
+                <td id="total-consumption-asia"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <!-- Tabla para África -->
+<section id="africa" class="continent-section">
+    <h2>África</h2>
+    <div class="filter-form">
+        <label for="year-africa">Filtrar por año:</label>
+        <select id="year-africa">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+        </select>
+        <label for="country-africa">Filtrar por país:</label>
+        <select id="country-africa">
+            <option value="">Todos</option>
+            <option value="Sudáfrica">Sudáfrica</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Kenia">Kenia</option>
+            <option value="Egipto">Egipto</option>
+            <option value="Marruecos">Marruecos</option>
+        </select>
+        <label for="energy-africa">Filtrar por tipo de energía:</label>
+        <select id="energy-africa">
+            <option value="">Todos</option>
+            <option value="Solar">Solar</option>
+            <option value="Eólica">Eólica</option>
+            <option value="Hidráulica">Hidráulica</option>
+        </select>
+        <button onclick="filterData('africa')">Filtrar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Tipos de Energía</th>
+                <th>Producción Total (GWh)</th>
+                <th>Consumo Total (GWh)</th>
+            </tr>
+        </thead>
+        <tbody id="africa-data">
+            <tr>
+                <td>Sudáfrica</td>
+                <td>Solar, Eólica, Carbón</td>
+                <td>1800</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>Nigeria</td>
+                <td>Solar, Hidráulica, Gas Natural</td>
+                <td>1500</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Kenia</td>
+                <td>Geotérmica, Solar, Eólica</td>
+                <td>1200</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>Egipto</td>
+                <td>Eólica, Solar, Hidráulica</td>
+                <td>900</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>Marruecos</td>
+                <td>Solar, Eólica, Biomasa</td>
+                <td>1300</td>
+                <td>700</td>
+            </tr>
+            <tr class="continent-total">
+                <td>Total por África</td>
+                <td></td>
+                <td id="total-production-africa"></td>
+                <td id="total-consumption-africa"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <!-- Tabla para Oceanía -->
+<section id="oceania" class="continent-section">
+    <h2>Oceanía</h2>
+    <div class="filter-form">
+        <label for="year-oceania">Filtrar por año:</label>
+        <select id="year-oceania">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+        </select>
+        <label for="country-oceania">Filtrar por país:</label>
+        <select id="country-oceania">
+            <option value="">Todos</option>
+            <option value="Australia">Australia</option>
+            <option value="Nueva Zelanda">Nueva Zelanda</option>
+            <option value="Fiyi">Fiyi</option>
+            <option value="Papúa Nueva Guinea">Papúa Nueva Guinea</option>
+        </select>
+        <label for="energy-oceania">Filtrar por tipo de energía:</label>
+        <select id="energy-oceania">
+            <option value="">Todos</option>
+            <option value="Solar">Solar</option>
+            <option value="Eólica">Eólica</option>
+            <option value="Geotérmica">Geotérmica</option>
+        </select>
+        <button onclick="filterData('oceania')">Filtrar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Tipos de Energía</th>
+                <th>Producción Total (GWh)</th>
+                <th>Consumo Total (GWh)</th>
+            </tr>
+        </thead>
+        <tbody id="oceania-data">
+            <tr>
+                <td>Australia</td>
+                <td>Solar, Eólica, Carbón</td>
+                <td>7000</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Nueva Zelanda</td>
+                <td>Hidráulica, Eólica, Solar</td>
+                <td>3000</td>
+                <td>2200</td>
+            </tr>
+            <tr>
+                <td>Fiyi</td>
+                <td>Solar, Eólica, Hidráulica</td>
+                <td>500</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Papúa Nueva Guinea</td>
+                <td>Geotérmica, Hidráulica, Solar</td>
+                <td>800</td>
+                <td>600</td>
+            </tr>
+            <tr class="continent-total">
+                <td>Total por Oceanía</td>
+                <td></td>
+                <td id="total-production-oceania"></td>
+                <td id="total-consumption-oceania"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div> <!-- Fin del contenedor -->
+<footer>
+<p>&copy; 2024 SevenBits Energy. Todos los derechos reservados.</p>
+</footer>
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+<div class="arrow">&#8679;</div>
+</div>
+
+<script src="/js/script_global.js"></script> <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
+<script src="/js/pais.js"></script> <!-- Importo el archivo JS (Pág. País)-->
+
+</body> <!-- CIERRA CUERPO -->
+</html> <!-- CIERRA HTML -->

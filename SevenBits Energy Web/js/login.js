@@ -1,0 +1,45 @@
+//       ***************************** PÁGINA DE INICIO DE SESIÓN *****************************       
+
+
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+const loginForm = document.getElementById('loginForm'); // Assuming you have a form with this ID
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+
+function iniciarSesion() {
+  const username = loginForm.username.value; // Assuming the username input has the ID "username"
+  const password = loginForm.password.value; // Assuming the password input has the ID "password"
+
+  // Simulación de validación (reemplazar con tu lógica real)
+  if (username === 'admin' && password === 'password123') {
+    // Aquí deberías hacer una solicitud al servidor para verificar las credenciales
+    // Si las credenciales son válidas, redirige a index.html
+    window.location.href = "inicio.html"; /* ANTERIORMENTE DECÍA INDEX.HTML */
+  } else {
+    alert("Credenciales incorrectas");
+  }
+}
+
+const links = document.querySelectorAll('.sidebar a');
+const contentSections = document.querySelectorAll('.main-content .content');
+
+links.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('data-target');
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(targetId).classList.add('active');
+        links.forEach(link => link.classList.remove('active'));
+        link.classList.add('active');
+    });
+});

@@ -1,0 +1,53 @@
+
+/*       ***************************** PÁGINA DE INICIO *****************************       */
+
+
+/* Estilo de título de producción y consumo (Página de Inicio) */
+
+.hero {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* Estilo de margen entre bloques de texto (Página de Inicio) */
+
+.charts {
+    margin: 10px 0;
+}
+
+/* Estilo de bloques de texto de gráficos de consumo y producción, acceso rápido, noticias y referencias (Página de Inicio) */
+
+section {
+    margin: 20px 0;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de noticias (Página de Inicio) */
+
+.news-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.news-item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* Estilo de referencias (Página de Inicio) */
+
+.references ul {
+    list-style: none;
+}
+
+.references ul li {
+    margin: 5px 0;
+}
+
