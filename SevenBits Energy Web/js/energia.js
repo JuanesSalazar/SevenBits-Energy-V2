@@ -51,8 +51,6 @@ tiposEnergia.forEach(energia => {
     energiaSelect.appendChild(opcionEnergia);
 });
 
-
-
 // SLIDER. Este código muestra cómo se puede utilizar un slider para mostrar imágenes en la página de energía renovable.
 
 let next = document.querySelector('.next')
