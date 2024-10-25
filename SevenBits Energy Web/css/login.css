@@ -200,7 +200,7 @@ body{
 .toggle{
     background-color: rgb(242, 113, 33);
     height: 100%;
-    background: linear-gradient(to right, rgb(242, 113, 33), rgb(250, 225, 126));
+    background: linear-gradient(to right, rgb(242, 113, 33), rgb(252, 155, 65));
     color: #fff;
     position: relative;
     left: -100%;
@@ -245,3 +245,88 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 } 
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 199; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #cccccc82;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f89602;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.topnav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #dbdbdb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #fa983c;
+    color: rgb(245, 245, 245);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+a svg{
+    transition: all .5s ease;
+    &:hover {
+        transform: rotate(180deg);
+    }
+}
+
+#ico{
+    display: none;
+  }

@@ -43,3 +43,21 @@ links.forEach(link => {
         link.classList.add('active');
     });
 });
+
+function openNav() {
+  let width = document.getElementById("sideNavigation").getAttribute("open");
+  console.log(width);
+  if(width === null){
+    document.getElementById("sideNavigation").setAttribute("open","true");
+    document.getElementById("sideNavigation").style.width   = "250px";
+  }else{
+    document.getElementById("sideNavigation").removeAttribute("open");
+    document.getElementById("sideNavigation").style.width = "0px";
+  }
+    // document.getElementById("sideNavigation").style.width = "250px";
+    // document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+    document.getElementById("sideNavigation").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
