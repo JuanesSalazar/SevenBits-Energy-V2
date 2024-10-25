@@ -44,7 +44,6 @@
 
 /* Estilo de texto de los continentes (página País) */
 
-
 h2 {
     margin: 2%;
     color: #435825;
@@ -109,5 +108,12 @@ th {
 
 .filter-form button:hover {
     background-color: #2b461b;
+}
+
+
+/* Estilo para el total de producción y consumo por continente  */
+.continent-total {
+    background-color: #b0ce9f; /* Verde claro */
+    font-weight: bold; /* Negrilla para las filas totales */
 }
 

@@ -51,11 +51,12 @@ nav ul li a.active {
 .logo img {
     width: 40px;
     height: 40px;
+    margin-left: 50px;
 }
 
 .logo h1 {
     color: #ffffff;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 24px;
 }
 
@@ -120,7 +121,7 @@ nav ul li a:hover {
     width: 40px;
     height: 40px;
     margin-left: 0px;
-    margin-right: 10px;
+    margin-right: 50px;
 }
 
 
