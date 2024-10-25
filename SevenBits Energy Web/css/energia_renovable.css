@@ -1,35 +1,33 @@
 /*       ***************************** PÁGINA DE ENERGÍA RENOVABLE  *************************************          */
 
 
-/* Estilo del separador de imagen-contenido de la página Energía renovable */
+/* Estilo general de la galería de encabezado de energía renovable
+   Define la estructura principal de la galería, centrándola en la pantalla */
 
-.hero {
-    background-color: rgb(159, 133, 6);
-    padding: 3px;
-}
-
-
-/* Estilo de la lista de tipos de energía renovable */
-/* Asegúrate de que el contenedor padre tenga display: flex */
 .padre {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* o position: static si no necesitas posicionamiento relativo */
-    height: 100vh; /* o el tamaño que necesites */
+    position: relative; 
+    height: 100vh; 
 }
 
+/* Contenedor de la galería
+   Establece un cuadro de fondo y sombra para la galería */
 .contenedor2 {
-    position: relative; /* Cambiado de absolute a relative */
+    position: relative; 
     width: auto;
     height: 300px;
     background: #f5f5f5;
-    box-shadow: 0 30px 50px #dbdbdb;
+    box-shadow: 0 30px 35px #dbdbdb;
     justify-content: center;
-    margin: 0%; /* Eliminado el margen */
+    margin: 0%; 
     margin-bottom: 8%;
 }
 
+
+/* Estilo de cada elemento individual en la galería
+   Define los elementos individuales con forma y sombras */
 .contenedor2 .slide .item{
     width: 200px;
     height: 200px;
@@ -46,6 +44,7 @@
 
 }
 
+/* Posiciona los dos primeros elementos para ocupar todo el ancho y alto del contenedor */
 .slide .item:nth-child(1),
 .slide .item:nth-child(2){
     top: 0;
@@ -56,6 +55,7 @@
     height: 100%;
 }
 
+/* Posición de los elementos sucesivos en el carrusel */
 .slide .item:nth-child(3){
     left: 50%;
 }
@@ -66,12 +66,14 @@
     left: calc(50% + 440px);
 }
 
-/* here n = 0, 1, 2, 3,... */
+/* Oculta elementos adicionales en el carrusel después de la quinta posición */
 .slide .item:nth-child(n + 6){
     left: calc(50% + 660px);
     opacity: 0;
 }
 
+/* Contenedor de texto sobre la imagen del carrusel
+   Posiciona y oculta el texto que aparece en cada elemento del carrusel */
 .item .contenedor21{
     position: absolute;
     top: 50%;
@@ -84,10 +86,13 @@
     display: none;
 }
 
+/* Muestra el contenedor de texto para el segundo elemento */
 .slide .item:nth-child(2) .contenedor21{
     display: block;
 }
 
+/* Estilo del nombre de la ubicación en el contenedor de texto
+   Anima y enfatiza el nombre con tamaño grande y mayúsculas */
 .contenedor21 .name{
     font-size: 40px;
     text-transform: uppercase;
@@ -96,6 +101,8 @@
     animation: animate 1s ease-in-out 1 forwards;
 }
 
+/* Estilo de la descripción en el contenedor de texto
+   Añade margen y una animación de aparición */
 .contenedor21 .des{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -103,6 +110,8 @@
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
+/* Estilo del botón en el contenedor de texto
+   Añade padding, cursor y animación para aparecer */
 .contenedor21 button{
     padding: 10px 20px;
     border: none;
@@ -111,6 +120,8 @@
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
+/* Animación de aparición para el texto y los botones
+   Transforma, difumina y hace que aparezcan suavemente */
 @keyframes animate {
     from{
         opacity: 0;
@@ -125,6 +136,8 @@
     }
 }
 
+/* Estilo del contenedor de botones del carrusel
+   Posiciona los botones al fondo del contenedor */
 .button {
     width: 100%;
     text-align: center;
@@ -132,6 +145,8 @@
     bottom: 20px;
 }
 
+/* Estilo para los botones de navegación
+   Define tamaño, bordes redondeados y transición de color en hover */
 .button button {
     width: 40px;
     height: 35px;
@@ -144,6 +159,7 @@
     position: relative; /* Necesario para los pseudo-elementos */
 }
 
+/* Flecha izquierda para el botón de navegación previa */
 .button .prev::before {
     content: '';
     position: absolute;
@@ -155,6 +171,7 @@
     border-color: transparent #000 transparent transparent;
 }
 
+/* Flecha derecha para el botón de navegación siguiente */
 .button .next::after {
     content: '';
     position: absolute;
@@ -166,19 +183,12 @@
     border-color: transparent transparent transparent #000;
 }
 
+/* Efecto hover en los botones del carrusel
+   Cambia el fondo y el color del texto */
 .button button:hover {
     background: #ababab;
     color: #000000;
 }
-
-
-
-
-
-
-
-
-
 
 /* Estilo de los tipos de Energía renovable */
 .hero-section {
