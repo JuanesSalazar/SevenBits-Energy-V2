@@ -8,6 +8,13 @@
     background-color: #ffffff;
     padding: 30px;
     text-align: center;
+    margin-top: 20px;
+   
+}
+
+.hero h1 {
+    font-size: larger;
+    
 }
 
 

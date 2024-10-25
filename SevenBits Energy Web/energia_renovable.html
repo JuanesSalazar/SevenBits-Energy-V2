@@ -36,41 +36,76 @@
             <a href="iniciar_sesion.html"><img class="profile-icon" src="images/profile-icon.png" alt="Perfil"></a> <!-- Enlace a iniciar sesión -->
         </div>
     </header>
-    <main>
-        <br><br><h1><center>Cálculo de producción y consumo de energía renovable por país.</center></h1>
-        <div class="content">
-            <div class="map-section">
-                <div class="filter-section">
-                    <label for="pais"></label>
-                    <select id="pais">
-                        <option value="">Seleccione un país</option>
-                    </select>
-                    <label for="energia"></label>
-                    <select id="energia">
-                        <option value="">Seleccione energía</option>
-                    </select>
-                    <label for="anio"></label>
-                    <select id="anio">
-                        <option value="">Seleccione un año</option>
-                    </select>
-                    <button id="enviar-btn">Enviar</button>
-                </div>
-                <br>
-                <p>En el <span id="anio-seleccionado">Año*</span> el país <span id="pais-seleccionado">País*</span> generó *****</span> KW en energía <span id="energia-generada"></span>*</p>
-                <div class="image-section">
-                    <img src="images/map.png" alt="Mapamundi">
-                    <img src="images/house.png" alt="Casas">
-                </div>                
-                <p>Lo que equivale a la energía de <span id="casas-equivalente">###</span> casas</p>
-            </div>
-            <div class="ranking-section">
-                <h2>Ranking</h2>
-                <ul>
-                    <?php include 'ranking.php'; ?>
-                </ul>
+
+<!-- Sección de Banner Carrusel -->
+
+
+<div class="contenedor2">
+    <div class="slide">
+        <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+            <div class="contenedor21">
+                <div class="name">Switzerland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
             </div>
         </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+            <div class="contenedor21">
+                <div class="name">Finland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
+            <div class="contenedor21">
+                <div class="name">Iceland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+            <div class="contenedor21">
+                <div class="name">Australia</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+            <div class="contenedor21">
+                <div class="name">Netherland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+            <div class="contenedor21">
+                <div class="name">Ireland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+    </div>
+    <!--Botón de Carrusel de imágenes -->
+    <div class="button">
+        <button class="prev">
+            <img src="/images/left-arow.jpg" alt="" class="imagen-flecha">
+        </button>
+        <button class="next">
+            <img src="/images/right-arow.jpg" alt="" class="imagen-flecha">
+        </button>
+    </div>
+    
+</div>
 
+
+
+
+        
+
+
+
+
+<!-- Sección de energías renovables.-->
         <section class="energy-section-interactive">
             <h2>¿Qué es la energía renovable?</h2>
             <br>
@@ -86,6 +121,50 @@
             </div>
         </section>
 
+
+<!-- Tipos de energía renovable  -->
+
+<section class="hero-section">
+    <div class="card-container"> 
+    <div class="card">
+    <div class="card-background" style="background-image: url(images/image3.jpg);"></div>
+    <div class="contenedor">
+    <div class="card-category">oversize</div>
+    <h3 class="card-heading">No Plans For Today Tee</h3>
+    </div>
+    </div>
+    <div class="card">
+    <div class="card-background" style="background-image: url(images/image4.jpg);"></div>
+    <div class="contenedor">
+    <div class="card-category">hoodie</div>
+    <h3 class="card-heading"> Boneless Hoodiec</h3>
+    </div>
+    </div>
+    <div class="card">
+    <div class="card-background" style="background-image: url(images/image5.jpg);"></div>
+    <div class="contenedor">
+    <div class="card-category"> polo </div>
+    <h3 class="card-heading"> Cream Polo </h3>
+    </div>
+    </div>
+    <div class="card">
+    <div class="card-background" style="background-image: url(images/image5.jpg);"></div>
+    <div class="contenedor">
+    <div class="card-category"> polo </div>
+    <h3 class="card-heading"> Cream Polo </h3>
+    </div>
+    </div>
+    <div class="card">
+    <div class="card-background" style="background-image: url(images/image5.jpg);"></div>
+    <div class="contenedor">
+    <div class="card-category"> polo </div>
+    <h3 class="card-heading"> Cream Polo </h3>
+    </div>
+    </div>
+    </div>
+    </section>
+
+<!-- -->
         <section class="energy-section">
             <h2>Energías renovables</h2>
             <div class="energy-grid">
@@ -136,9 +215,82 @@
                 </div>
             </div>
         </section>
-        <br><br><br><br>
+        
+        <!-- Graficos y estadísticas -->
+        <section class="hero1">
+        <h1>Cálculo de producción y consumo de energía renovable por país</h1>
+        </section>
+        <div class="content"> <!--Tabla para cálculo de producción de energía renovable -->
+            <div class="map-section">
+                <h1><center>Producción de energía renovable por país</center></h1><br>
+                <div class="filter-section">
+                    <label for="pais"></label>
+                    <select id="pais">
+                        <option value="">País</option>
+                    </select>
+                    <label for="energia"></label>
+                    <select id="energia">
+                        <option value="">Tipo de energía</option>
+                    </select>
+                    <label for="anio"></label>
+                    <select id="anio">
+                        <option value="">Año</option>
+                    </select>
+                    <button id="enviar-btn">Enviar</button>
+                </div>
+                <br>
+                <p>En el <span id="anio-seleccionado">Año*</span>, el país <span id="pais-seleccionado">País*</span> produjo *****</span> KW en energía <span id="energia-generada"></span></p>
+                <div class="image-section">
+                    <img src="images/map.png" alt="Mapamundi">
+                    <img src="images/house.png" alt="Casas">
+                </div>                
+                <p>Esta producción equivale a la energía de <span id="casas-equivalente">###</span> casas</p>
+            </div>
+            <div class="ranking-section">
+                <h2>Ranking de producción</h2>
+                <ul>
+                    <?php include 'ranking.php'; ?>
+                </ul>
+            </div>
+        </div> <!--Fin de tabla para cálculo de producción de energía renovable -->
 
+        <div class="content2"> <!--Tabla para cálculo de consumo de energía renovable -->
+            <div class="ranking-section2">
+                <h2>Ranking de consumo</h2>
+                <ul>
+                    <?php include 'ranking.php'; ?>
+                </ul>
+            </div>
+            <div class="map-section2">
+                <h1><center>Consumo de energía renovable por país</center></h1><br>
+                <div class="filter-section2">
+                    <label for="pais"></label>
+                    <select id="pais">
+                        <option value="">País</option>
+                    </select>
+                    <label for="energia"></label>
+                    <select id="energia">
+                        <option value="">Tipo de energía</option>
+                    </select>
+                    <label for="anio"></label>
+                    <select id="anio">
+                        <option value="">Año</option>
+                    </select>
+                    <button id="enviar-btn">Enviar</button>
+                </div>
+                <br>
+                <p>En el <span id="anio-seleccionado">Año*</span>, el país <span id="pais-seleccionado">País*</span> tuvo un consumo de *****</span> KW en energía <span id="energia-generada"></span></p>
+                <div class="image-section2">
+                    <img src="images/map.png" alt="Mapamundi">
+                    <img src="images/house.png" alt="Casas">
+                </div>                
+                <p>Esta producción equivale a la energía de <span id="casas-equivalente">###</span> casas</p>
+            </div>
+        </div> <!--Fin de tabla para cálculo de consumo de energía renovable -->
+
+        <br><br><br><br>
     </main>
+
 
     <footer>
         <p>&copy; 2024 SevenBits Energy. Todos los derechos reservados.</p>
@@ -148,6 +300,8 @@
         <div class="arrow">&#8679;</div>
     </div>
     
+
+
     
     <script src="js/script_global.js"></script> <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
     <script src="js/energia.js"></script> <!-- Importo el archivo JS (Pág. Energía renovable)-->
