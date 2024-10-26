@@ -108,6 +108,7 @@ nav ul li a:hover {
     border-radius: 24px;
     border: none;
     margin-right: 20px;
+    background-color: white;
 }
 
 .search-container button {
@@ -179,7 +180,14 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: #273c27;
+    backdrop-filter: blur(80px); /* Efecto de desenfoque para el cristal */
+    background: radial-gradient(at 87.13% 99.67%, rgb(35, 123, 13) 0%, hsla(101, 76.67%, 47.06%, 0) 100%), 
+                radial-gradient(at 28.45% 55.02%, rgb(5, 75, 11) 0%, hsla(77.9, 83.78%, 29.02%, 0) 100%), 
+                radial-gradient(at 22.85% 44.71%, rgb(45, 102, 24) 0%, hsla(50.04, 91.02%, 48.04%, 0) 100%), 
+                radial-gradient(at 66.68% 30.92%, rgb(137, 88, 4) 0%, hsla(38, 96%, 49.02%, 0) 100%), 
+                radial-gradient(at 82.56% 77.13%, rgb(18, 52, 2) 0%, hsla(101, 76.67%, 47.06%, 0) 100%), 
+                radial-gradient(at 61.94% 61.17%, rgb(28, 147, 6) 0%, hsla(77.9, 83.78%, 29.02%, 0) 100%);
+    background-blend-mode: overlay;
     color: white;
     font-size: 14px;
 }

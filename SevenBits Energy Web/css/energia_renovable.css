@@ -22,9 +22,8 @@
     box-shadow: 0 30px 35px #dbdbdb;
     justify-content: center;
     margin: 0%; 
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 }
-
 
 /* Estilo de cada elemento individual en la galería
    Define los elementos individuales con forma y sombras */
@@ -35,7 +34,7 @@
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
-    box-shadow: 0 30px 50px #505050;
+    box-shadow: 0 30px 50px #00000037;
     background-position: 10% 10%;
     background-size: cover;
     display: inline-block;
@@ -77,13 +76,15 @@
 .item .contenedor21{
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 150px;
     width: 300px;
     text-align: left;
-    color: #eee;
+    color: #ffffff;
     transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
+    font-weight: 900;
+    align-content: space-around;
 }
 
 /* Muestra el contenedor de texto para el segundo elemento */
@@ -94,9 +95,9 @@
 /* Estilo del nombre de la ubicación en el contenedor de texto
    Anima y enfatiza el nombre con tamaño grande y mayúsculas */
 .contenedor21 .name{
-    font-size: 40px;
+    font-size: 30px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight:800;
     opacity: 0;
     animation: animate 1s ease-in-out 1 forwards;
 }
@@ -114,7 +115,9 @@
    Añade padding, cursor y animación para aparecer */
 .contenedor21 button{
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #000000;
+    background-color: #ffffffea;
+    border-radius: 22px;
     cursor: pointer;
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
@@ -150,7 +153,7 @@
 .button button {
     width: 40px;
     height: 35px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     margin: 0 5px;
@@ -190,372 +193,6 @@
     color: #000000;
 }
 
-/* Estilo de los tipos de Energía renovable */
-.hero-section {
-    display: flex;
-    min-height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    padding: 2%;
-    margin-top: 3%;
-    }
-    
-    .card-container {
-    display: flex;
-    gap: 30px;
-    width: 100%;
-    justify-content: center;
-    }
-    
-    .card {
-    position: relative;
-    list-style: none;
-    width: 220px;
-    transition: .3s ease;
-    }
-    
-    .card::before {
-    content:"";
-    display: block;
-    padding-bottom: 150%;
-    width: 100%;
-    }
-    
-    .card-background {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    border-radius: 20px;
-    background-size: 350px;
-    background-position: center;
-    filter: brightness(.9) saturate (1) contrast(1);
-    transform-origin: bottom;
-    transform: scale(1) translateZ(0);
-    transition: .3s ease;
-    }
-    
-    .card:hover .card-background {
-    transform: scale(1.15) translateZ(0);
-    background-size: 260px;
-    }
-    
-    .card-container:hover .card:not(:hover) {
-    transform: scale(.9);
-    }
-    
-    .card-container:hover > .card:not(:hover) .card-background,
-    card-container:hover > .card:not(:hover) .card-category {
-    filter: brightness(.5) saturate (0) contrast(1.2) blur(20px);
-    }
-    
-    .contenedor {
-    top: 50%;
-    left: 0;
-    padding: 25px;
-    position: absolute;
-    }
-
-    .card-category {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    }
-    
-    .card-heading {
-    color: #fff;
-    font-size: 25px;
-    line-height: 1;
-    text-shadow: 2px 2px 20px Irgba(0, 0, 0, 2);
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilo del título de la página Energía renovable */
-.hero1 {
-    padding: 20px;
-    text-align: center;
-    color: black;
-    font-size: larger;
-    margin-top: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 0%;
-}
-
-/* Estilo del contenedor del cálculo de PRODUCCIÓN energía renovable por país (página Energía renovable)*/
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-bottom: 3%;
-    margin-top: 6%;
-    background-color: rgb(255, 255, 255);
-    padding: 2%;
-    border-radius: 3%;
-}
-
-/* Estilo de las imágenes correspondientes (PRODUCCIÓN) al mapamundi y las casas (página Energía renovable)*/
-
-.image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Agrega espacio entre las imágenes */
-}
-
-.map-section {
-    width: 60%;
-    text-align: center;
-    background-color: #f6f6f6;
-    padding: 30px;
-    border-radius: 18px;
-    border: 5px solid #2b461b; 
-}
-
-.map-section .filter-section {
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.house-section {
-    text-align: center;
-}
-
-.house-section img {
-    width: 60px;
-    margin: 10px;
-}
-
-.map-section p {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-.map-section img {
-    max-width: 50%; /* Ajusta el ancho máximo al 100% */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 20px 0;
-}
-
-/* Estilo de sección de Ranking PRODUCCIÓN (página Energía renovable)*/
-
-.ranking-section {
-    width: 30%;
-    background-color: #3a4b1f;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-}
-
-.ranking-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #f6f6f6;
-    padding: 10px;
-    border-radius: 10px;
-    color: #273c27; 
-}
-
-.ranking-section ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.ranking-section ul li {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-/* Estilo del filtrado de PRODUCCIÓN país, año y tipo de energía (página Energía renovable)*/
-
-.filter-section {
-    justify-content: center;
-    margin: 10px 0;
-    gap: 20px;
-    position: relative; 
-    z-index: 10; 
-}
-
-.filter-section label {
-    margin-right: 0px;
-    
-}
-
-.filter-section select {
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 15px;
-    background-color: #4b5e30;
-    color: white;
-    border: #3a4b1f;
-    border: 2px solid #3a4b1f;
-    
-}
-
-.filter-section button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #3a4b1f;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-/* Estilo del filtrado de CONSUMO país, año y tipo de energía (página Energía renovable)*/
-
-.filter-section2 {
-    justify-content: center;
-    margin: 10px 0;
-    gap: 20px;
-    position: relative; 
-    z-index: 10; 
-}
-
-.filter-section2 label {
-    margin-right: 0px;
-    
-}
-
-.filter-section2 select {
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 15px;
-    background-color: #4b5e30;
-    color: white;
-    border: #3a4b1f;
-    
-}
-
-.filter-section2 button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #3a4b1f;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-
-/* Estilo del contenedor del cálculo de CONSUMO energía renovable por país (página Energía renovable)*/
-
-.content2 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 6%;
-    margin-right: 6%;
-    background-color: rgb(255, 255, 255);
-    padding: 2%;
-    border-radius: 3%;
-    
-}
-
-/* Estilo de las imágenes correspondientes a (CONSUMO) al mapamundi y las casas (página Energía renovable)*/
-
-.image-section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Agrega espacio entre las imágenes */
-}
-
-.map-section2 {
-    width: 60%;
-    text-align: center;
-    background-color: #f6f6f6;
-    padding: 30px;
-    border-radius: 18px;
-    border: 5px solid #2b461b; 
-}
-
-.map-section2 .filter-section2 {
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.house-section {
-    text-align: center;
-}
-
-.house-section img {
-    width: 60px;
-    margin: 10px;
-}
-
-.map-section2 p {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-.map-section2 img {
-    max-width: 50%; /* Ajusta el ancho máximo al 100% */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 20px 0;
-}
-
-/* Estilo de sección de Ranking CONSUMO (página Energía renovable)*/
-
-.ranking-section2 {
-    width: 30%;
-    background-color: #3a4b1f;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-}
-
-.ranking-section2 h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #f6f6f6;
-    padding: 10px;
-    border-radius: 10px;
-    color: #273c27; 
-}
-
-.ranking-section2 ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.ranking-section2 ul li {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-
 
 
 /* Estilo de la sección de textos correspondiente a qué es la energía renovable (página Energía renovable)*/
@@ -563,34 +200,101 @@
 .energy-section-interactive {
     margin-top: 50px;
     text-align: center;
+    
 }
 
+/* Contenedor principal con efecto de vidrio y movimiento */
 .interactive-container {
-    align-content: center;
+    margin-top: 50px;
     display: flex;
-    flex-direction: row; /* Cambia la dirección a fila para que la imagen y el texto queden uno al lado del otro */
+    flex-direction: row;
     align-items: center;
     gap: 40px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo semitransparente */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centra el contenedor */
-    max-width: 900px; /* Define un ancho máximo */
-    width: 90%; /* Permite que el contenedor se ajuste según el ancho de la pantalla */
-}
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 900px;
+    width: 90%;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform; /* Optimización de rendimiento */
+    box-shadow: 0 10px 50px #00000084;
 
+}
 
 .interactive-container:hover {
     transform: translateY(-5px);
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Ajuste de la imagen para que sea más pequeña */
-.image-container img {
-    width: 200px; /* Define un tamaño pequeño para la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-right: 10px; /* Añade espacio a la derecha de la imagen */
+/* Movimiento suave que sigue al cursor */
+.interactive-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.15s ease;
 }
+
+.interactive-container:hover::before {
+    transform: translate(-50%, -50%) scale(1.1); /* Escala al hacer hover */
+}
+
+/* Ajuste de la imagen */
+.image-container {
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Imagen con borde animado en tonos naranjas */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: transform 0.5s ease;
+    animation: gradient-border 5s linear infinite; /* Animación del borde */
+}
+
+/* Hover con transformación 3D */
+.image-container:hover img {
+    transform: rotateY(10deg) rotateX(6deg) scale(9.05);
+}
+
+/* Animación de borde degradado en tonos naranjas */
+@keyframes gradient-border {
+    0% {
+        border-color: #98782e;
+    }
+    5% {
+        border-color: #ffae42;
+    }
+    10% {
+        border-color: #8f8105;
+    }
+    25% {
+        border-color: #2a5b1b;
+    }
+    80% {
+        border-color: #086018;
+    }
+    100% {
+        border-color: #2f733b;
+    }
+}
+
 
 .info {
     color: #273c27;
@@ -603,8 +307,10 @@
 /* Estilo de sección de energías renovables (página Energía renovable)*/
 
 .energy-section {
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .energy-section h2 {
@@ -669,3 +375,534 @@
         position: relative;
         z-index: 1;
     }
+
+
+/* Estilo de los tipos de Energía renovable */
+.hero-section {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 2%;
+    margin-top: 3%;
+    box-shadow: 0 30px 20px #00000029;
+
+    }
+    
+    .card-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    }
+    
+    .card {
+    position: relative;
+    list-style: none;
+    width: 220px;
+    transition: .3s ease;
+    }
+    
+    .card::before {
+    content:"";
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+    }
+    
+    .card-background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background-size: 350px;
+    background-position: center;
+    filter: brightness(.9) saturate (1) contrast(1);
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: .3s ease;
+    }
+    
+    .card:hover .card-background {
+    transform: scale(1.15) translateZ(0);
+    background-size: 260px;
+    }
+    
+    .card-container:hover .card:not(:hover) {
+    transform: scale(.9);
+    }
+    
+    .card-container:hover > .card:not(:hover) .card-background,
+    card-container:hover > .card:not(:hover) .card-category {
+    filter: brightness(.5) saturate (0) contrast(1.2) blur(20px);
+    }
+    
+    .contenedor {
+    top: 50%;
+    left: 0;
+    padding: 25px;
+    position: absolute;
+    }
+
+    .card-category {
+    color: #fff;
+    background-color: #00000016;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 100%;
+    }
+    
+    .card-heading {
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px Irgba(0, 0, 0, 2);
+    }
+
+
+/* Estilo del título de la página Energía renovable */
+.hero1 {
+    padding: 20px;
+    text-align: center;
+    color: #273c27;
+    font-size: 1.5em;
+    margin: 40px 10% 0;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgb(255, 255, 255);
+    transition: transform 0.3s ease;
+}
+
+.hero1:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Estilo del contenedor del cálculo de PRODUCCIÓN energía renovable por país (página Energía renovable)*/
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 6% 6% 3%;
+    padding: 2%;
+    background: rgba(255, 255, 255, 0.622);
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.808);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.content:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo de las imágenes correspondientes (PRODUCCIÓN) al mapamundi y las casas (página Energía renovable)*/
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Agrega espacio entre las imágenes */
+}
+
+.map-section {
+    width: 60%;
+    text-align: center;
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 18px;
+    border: 5px solid #2b461b; 
+}
+.map-section:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 8px 20px rgba(43, 70, 27, 0.3);
+}
+
+.map-section .filter-section {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.house-section {
+    text-align: center;
+}
+
+.house-section img {
+    width: 60px;
+    margin: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.house-section img:hover {
+    transform: scale(1.15);
+    filter: brightness(1.3);
+
+}
+
+.map-section p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.map-section img {
+    max-width: 50%; /* Ajusta el ancho máximo al 100% */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 20px 0;
+}
+
+/* Estilo de sección de Ranking PRODUCCIÓN (página Energía renovable)*/
+
+.ranking-section {
+    width: 30%;
+    background: linear-gradient(135deg, #3a4b1f, #2b461b);
+    padding: 20px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ranking-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgb(111, 128, 16), rgba(26, 113, 5, 0));
+    animation: rotate-border 5s linear infinite;
+}
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ranking-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #273c27; 
+}
+
+.ranking-section ul {
+    list-style: none;
+    padding-left: 0;
+    color: white;
+}
+
+.ranking-section ul li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Estilo del filtrado de PRODUCCIÓN país, año y tipo de energía (página Energía renovable)*/
+
+.filter-section {
+    justify-content: center;
+    margin: 10px 0;
+    gap: 20px;
+    position: relative; 
+    z-index: 10; 
+}
+
+.filter-section label {
+    margin-right: 0px;
+    
+}
+
+.filter-section select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: #4e7124;
+    color: white;
+    border: 2px solid #00000086;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.filter-section button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #416801;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* Estilo del filtrado de CONSUMO país, año y tipo de energía (página Energía renovable)*/
+
+.filter-section2 {
+    justify-content: center;
+    margin: 10px 0;
+    gap: 20px;
+    position: relative; 
+    z-index: 10; 
+}
+
+.filter-section2 label {
+    margin-right: 0px;
+    
+}
+
+.filter-section2 select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: #4e7813;
+    color: white;
+    border: 2px solid #365800;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-section2 select:hover {
+    background-color: #3a4b1f;
+}
+
+.filter-section2 button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #3d6300;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.filter-section2 button:hover {
+    background-color: #4b5e30;
+    transform: scale(1.1);
+}
+
+/* Estilo del contenedor del cálculo de CONSUMO energía renovable por país (página Energía renovable)*/
+
+.content2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6%;
+    margin-right: 6%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.808);
+    padding: 2%;
+    border-radius: 3%;
+    
+}
+
+.content2:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo de las imágenes correspondientes a (CONSUMO) al mapamundi y las casas (página Energía renovable)*/
+
+.image-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Agrega espacio entre las imágenes */
+}
+
+.map-section2 {
+    width: 60%;
+    text-align: center;
+    background: #f3f3f3;
+    padding: 30px;
+    border-radius: 18px;
+    border: 5px solid #6c8100; 
+    transition: transform 0.3s ease;
+}
+
+.map-section2:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 8px 20px rgba(43, 70, 27, 0.3);
+}
+
+.map-section2 .filter-section2 {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.house-section {
+    text-align: center;
+}
+
+.house-section img {
+    width: 60px;
+    margin: 10px;
+}
+
+.map-section2 p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.map-section2 img {
+    max-width: 50%; /* Ajusta el ancho máximo al 100% */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 20px 0;
+}
+
+/* Estilo de sección de Ranking CONSUMO (página Energía renovable)*/
+
+.ranking-section2 {
+    width: 30%;
+    background: linear-gradient(135deg, #3a4b1f, #2b461b);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ranking-section2::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(251, 255, 0, 0.551), rgba(122, 120, 8, 0.458));
+    animation: rotate-border 5s linear infinite;
+}
+
+.ranking-section2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000000; 
+}
+
+.ranking-section2 ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ranking-section2 ul li {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* */
+
+.wrapper12 {
+    width: 100%;
+    height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.container12 {
+    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card12 {
+    width: 280px;
+    border-radius: 10px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card12 > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card12 > .row > .icon12 {
+    background: #223;
+    color: white;
+    border-radius: 10px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card12 > .row > .description12 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description12 p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description12 h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description12 {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card12[for="c1"] {
+    background-image: url(/images/image1.jpg);
+}
+.card12[for="c2"] {
+    background-image: url(/images/image2.jpg);
+}
+.card12[for="c3"] {
+    background-image: url(/images/image3.jpg);
+}
+.card12[for="c4"] {
+    background-image: url(/images/image4.webp);
+}
+.card12[for="c5"] {
+    background-image: url(/images/image5.jpg);
+}
+.card12[for="c5"] {
+    background-image: url(/images/image6.jpg);
+}
