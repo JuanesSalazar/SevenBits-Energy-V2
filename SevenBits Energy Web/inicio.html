@@ -1,4 +1,3 @@
-
 <!--        ***************************** PÁGINA DE INICIO *****************************        -->
 
 
@@ -13,13 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energías Renovables - País</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon"> <!-- Importo el icono de la página -->
-    <link rel="stylesheet" href="css/inicio.css"> <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. Inicio) -->
-    <link rel="stylesheet" href="css/estilo_global.css"> <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
-    <link rel="stylesheet" href="css/inicio_responsive.css"> <!--Importo el archivo CSS correspondiente al diseño responsivo (pág.Inicio)-->
-    
+    <link rel="stylesheet" href="css/inicio.css">
+    <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. Inicio) -->
+    <link rel="stylesheet" href="css/estilo_global.css">
+    <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
+    <link rel="stylesheet" href="css/inicio_responsive.css">
+    <!--Importo el archivo CSS correspondiente al diseño responsivo (pág.Inicio)-->
+    <script async src="https://www.gstatic.com/charts/loader.js"></script> <!--*conexcion con la api-->
+    <!--*https://developers.google.com/chart?hl=es-419 info de la api-->
+
 </head> <!-- CIERRA CABEZA -->
 
-    <!-- Aquí se añadirá el contenido de la página -->
+<!-- Aquí se añadirá el contenido de la página -->
 
 
 <body> <!-- EMPIEZA CUERPO -->
@@ -32,11 +36,11 @@
         <nav>
             <ul>
                 <li><a href="inicio.html" class="active">Inicio</a></li>
-                <li><a href="energia_renovable.html" >Energías renovables</a></li>
+                <li><a href="energia_renovable.html">Energías renovables</a></li>
                 <li><a href="paises.html">Regiones y países</a></li>
             </ul>
-        </nav>   
-        <!--  -->     
+        </nav>
+        <!--  -->
         <div class="search-container">
             <input type="text" placeholder="Buscar" id="search-input">
             <button id="search-button"><img src="images/search-icon.png" alt="Buscar"></button>
@@ -44,132 +48,215 @@
         </div>
     </header>
     <main>
-         <!-- Panel de Bienvenida -->
-    <section class="welcome-panel">
-        <img src="images/logo.png" alt="7Bits Energy Logo">
-        <h1>¡Bienvenido a SevenBits Energy!</h1>
-        
+        <!-- Panel de Bienvenida -->
+        <section class="welcome-panel">
+            <img src="images/logo.png" alt="7Bits Energy Logo">
+            <h1>¡Bienvenido a SevenBits Energy!</h1>
 
-         <!-- Panel oculto de Sobre Nosotros -->
-    <div class="about-panel">
-        <h2>SOBRE NOSOTROS</h2>
-        <p>En SevenBits Energy, nos encontramos un grupo de jóvenes programadores 
-            que nos dedicamos a promover el conocimiento sobre energías limpias para un futuro mejor.</p>
-        <div class="image-container">
-            <div class="member">
-                <img src="images/Darcy.jpeg" alt="Miembro 1">
-                <p>Darcy D. Andrade-Burgos</p>
-                <p>20 años</p>
-                <p>Estudiante Biología</p>
-            </div>
-            <div class="member">
-                <img src="images/Juanes.jpeg" alt="Miembro 2">
-                <p>Juan E. Salazar-Varón</p>
-                <p>18 años</p>
-                <p>Gestor de redes de datos</p>
-            </div>
-            <div class="member">
-                <img src="images/Dani.jpg" alt="Miembro 3">
-                <p>Daniela</p>
-                <p> años</p>
-                <p>Estudiante</p>
-            </div>
-            <div class="member">
-                <img src="images/Diego.jpeg" alt="Miembro 4">
-                <p>Diego A. Montoya-Giraldo</p>
-                <p>19 años</p>
-                <p>Desarrollador de software</p>
-            </div>
-            <div class="member">
-                <img src="images/Dani.jpg" alt="Miembro 5">
-                <p>Andrés</p>
-                <p> años</p>
-                <p>Estudiante</p>
-            </div>
-            <div class="member">
-                <img src="images/Dani.jpg" alt="Miembro 6">
-                <p>Emanuel</p>
-                <p> años</p>
-                <p>Estudiante</p>
-            </div>
-         </div>
-            
-     </div>
 
-    
-    </section>
+            <!-- Panel oculto de Sobre Nosotros -->
+            <div class="about-panel">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>En SevenBits Energy, nos encontramos un grupo de jóvenes programadores
+                    que nos dedicamos a promover el conocimiento sobre energías limpias para un futuro mejor.</p>
+                <div class="image-container">
+                    <div class="member">
+                        <img src="images/Darcy.jpeg" alt="Miembro 1">
+                        <p>Darcy D. Andrade-Burgos</p>
+                        <p>20 años</p>
+                        <p>Estudiante Biología</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/Juanes.jpeg" alt="Miembro 2">
+                        <p>Juan E. Salazar-Varón</p>
+                        <p>18 años</p>
+                        <p>Gestor de redes de datos</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/Dani.jpg" alt="Miembro 3">
+                        <p>Daniela</p>
+                        <p> años</p>
+                        <p>Estudiante</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/Diego.jpeg" alt="Miembro 4">
+                        <p>Diego A. Montoya-Giraldo</p>
+                        <p>19 años</p>
+                        <p>Desarrollador de software</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/Dani.jpg" alt="Miembro 5">
+                        <p>Andrés</p>
+                        <p> años</p>
+                        <p>Estudiante</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/Dani.jpg" alt="Miembro 6">
+                        <p>Emanuel</p>
+                        <p> años</p>
+                        <p>Estudiante</p>
+                    </div>
+                </div>
 
-            <section class="hero">
+            </div>
+
+
+        </section>
+
+        <section class="hero">
             <h2>Producción y consumo de energía a nivel global</h2>
             <p>Accede a datos relevantes sobre energías renovables a nivel mundial.</p>
         </section>
 
         <section class="charts">
-            <br><br><h3>Producción total de energía por tipo a nivel global</h3>
-            <canvas id="energyProductionChart"></canvas>
+            <div class="hot_map_section boxes div1">
+                <!--**********************************************-->
+                <h1>Produccion total de energías Renovables por pais</h1>
 
-            <h3>Consumo total de energía por tipo a nivel global</h3>
-            <canvas id="energyConsumptionChart"></canvas>
+                <div id="hot_map"></div>
+                <div class="select-section">
+                    <label for="year"></label>
+                    <select id="year_select"> <!--*Selector del año para moverse entre los graficos-->
+                        <option value="0">Año</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="1989">1989</option>
+                        <option value="1988">1988</option>
+                        <option value="1987">1987</option>
+                        <option value="1986">1986</option>
+                        <option value="1985">1985</option>
+                        <option value="1984">1984</option>
+                        <option value="1983">1983</option>
+                        <option value="1982">1982</option>
+                        <option value="1981">1981</option>
+                        <option value="1980">1980</option>
+                        <option value="1979">1979</option>
+                        <option value="1978">1978</option>
+                        <option value="1977">1977</option>
+                        <option value="1976">1976</option>
+                        <option value="1975">1975</option>
+                        <option value="1974">1974</option>
+                        <option value="1973">1973</option>
+                        <option value="1972">1972</option>
+                        <option value="1971">1971</option>
+                        <option value="1970">1970</option>
+                        <option value="1969">1969</option>
+                        <option value="1968">1968</option>
+                        <option value="1967">1967</option>
+                        <option value="1966">1966</option>
+                        <option value="1965">1965</option>
+                    </select>
+                </div>
+                <div class="loader-container">
+                    <img src="images/tree.png" alt="Loading" class="loader-image">
+                </div>
+
+            </div>
+
+            <div class="graf_2 boxes div2"><!--*Sin cambios aun-->
+                <h3>Producción total de energía por tipo a nivel global</h3>
+                <canvas id="energyProductionChart"></canvas>
+            </div>
         </section>
 
         <section class="quick-access">
-            <p><strong><h3>Acceso Rápido</h3></strong></p>
-            
+            <p><strong>
+                    <h3>Acceso Rápido</h3>
+                </strong></p>
+
             <ul>
                 <li><a href="energia_renovable.html">Consulta Energías Renovables</a></li>
                 <li><a href="paises.html">Consulta por País</a></li>
             </ul>
-        
+
         </section>
 
         <!-- Panel de Noticias -->
-    <section class="news">
-        <h3>Últimas Noticias sobre Energía Renovable</h3>
-        <div class="news-item">
-            <img src="images/eolica.png" alt="Noticia 1">
-            <a href="https://www.energias-renovables.com/eolica/minieolica-para-generar-energia-con-los-flujos-20241025"> Minieólica para generar energía con los flujos de aire artificiales ahora desaprovechados</a>
-        </div>
-        <div class="news-item">
-            <img src="images/solar.png" alt="Noticia 2">
-            <a href="https://www.energias-renovables.com/solar-termica/solar-heat-europe-aplaude-la-actualizacion-de-20240312"> Solar Heat Europe aplaude la actualización de la directiva sobre eficiencia energética de los edificios</a>
-        
-    </section>
+        <section class="news">
+            <h3>Últimas Noticias sobre Energía Renovable</h3>
+            <div class="news-item">
+                <img src="images/eolica.png" alt="Noticia 1">
+                <a
+                    href="https://www.energias-renovables.com/eolica/minieolica-para-generar-energia-con-los-flujos-20241025">
+                    Minieólica para generar energía con los flujos de aire artificiales ahora desaprovechados</a>
+            </div>
+            <div class="news-item">
+                <img src="images/solar.png" alt="Noticia 2">
+                <a
+                    href="https://www.energias-renovables.com/solar-termica/solar-heat-europe-aplaude-la-actualizacion-de-20240312">
+                    Solar Heat Europe aplaude la actualización de la directiva sobre eficiencia energética de los
+                    edificios</a>
+
+        </section>
 
         <section class="references">
             <h4>Referentes en Energía Renovable</h4>
-            <ul style="display: flex ; justify-content: center;" >
+            <ul style="display: flex ; justify-content: center;">
                 <li class="logo">
                     <a href="https://www.irena.org/" target="_blank">
-                        <img src="images/IRENA.png" alt="IRENA Logo" style="height: 150px; width: 250px;" >
-                        
+                        <img src="images/IRENA.png" alt="IRENA Logo" style="height: 150px; width: 250px;">
+
                     </a>
                 </li>
                 <li class="logo">
                     <a href="https://www.nrel.gov/" target="_blank">
                         <img src="images/NREL.png" alt="NREL Logo" style="height: 150px; width: 250px;">
-                        
+
                     </a>
                 </li>
                 <li class="logo">
                     <a href="https://www.worldenergy.org/" target="_blank">
                         <img src="images/wec.png" alt="World Energy Council Logo" style="height: 150px; width: 250px;">
-                       
+
                     </a>
                 </li>
             </ul>
         </section>
     </main>
-<br><br>   
+    <br><br>
 
-<footer>
-    <p>&copy; 2024 SevenBits Energy. Todos los derechos reservados.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 SevenBits Energy. Todos los derechos reservados.</p>
+    </footer>
 
-<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
-    <div class="arrow">&#8679;</div>
-</div>
+    <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+        <div class="arrow">&#8679;</div>
+    </div>
 
-<script src="js/script_global.js"></script> <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
-<script src="js/inicio.js"></script> <!-- Importo el archivo JS (Pág. Inicio)-->
+    <script src="js/script_global.js"></script>
+    <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
+    <script src="js/inicio.js"></script> <!-- Importo el archivo JS (Pág. Inicio)-->
+    <script src="js/hotMap.js"></script>
 </body> <!-- CIERRA CUERPO -->
+
 </html> <!-- CIERRA HTML -->

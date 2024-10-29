@@ -1,89 +1,121 @@
-
 /*       ***************************** PÁGINA DE INICIO *****************************       */
 .welcome-panel {
-    position: relative; /* Asegura que el panel "Sobre Nosotros" se posicione en relación con el panel principal */
-    width: 1480px;
+    position: relative;
+    /* Asegura que el panel "Sobre Nosotros" se posicione en relación con el panel principal */
+    width: 100%;
+    /** era muy grande**/
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: #273c27; /* Fondo verde */
+    background-color: #273c27;
+    /* Fondo verde */
     padding: 40px;
     margin: 20px auto;
     margin-left: auto;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 15px;
+    /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff; /* Texto en blanco para contraste */
+    color: #fff;
+    /* Texto en blanco para contraste */
     background-color: #273c27;
-    align-items: center; /* Centra los elementos horizontalmente   
- */ 
+    align-items: center;
+    /* Centra los elementos horizontalmente   
+ */
 
 }
 
 /* Estilo para el panel oculto */
 .about-panel {
-    display: none; /* Oculto inicialmente */
+    display: none;
+    /* Oculto inicialmente */
     position: absolute;
-    top: 100%; /* Colocado justo debajo del panel principal */
+    top: 100%;
+    /* Colocado justo debajo del panel principal */
     left: 0;
     right: 0;
-    background-color: #725b32; /* Fondo para que el texto negro contraste */
-    color: #ffffff; /* Texto en negro */
+    background-color: #725b32;
+    /* Fondo para que el texto negro contraste */
+    color: #ffffff;
+    /* Texto en negro */
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    transition: opacity 0.3s ease; /* Suaviza la transición de aparición *//
+    transition: opacity 0.3s ease;
+    /* Suaviza la transición de aparición */
 }
 
 /* Muestra el panel al pasar el mouse */
 .welcome-panel:hover .about-panel {
     display: block;
-    opacity: 1; /* Aparece gradualmente */
+    opacity: 1;
+    /* Aparece gradualmente */
 }
 
 .about-panel {
     display: flex;
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
+    flex-direction: column;
+    /* Asegura que los elementos se apilen verticalmente */
+    align-items: center;
+    /* Centra el contenido horizontalmente */
 }
 
 .image-container {
-    display: flex; /* Usar flexbox para alinear imágenes en fila */
-    justify-content: center; /* Centra las imágenes en el contenedor */
+    display: flex;
+    /* Usar flexbox para alinear imágenes en fila */
+    justify-content: center;
+    /* Centra las imágenes en el contenedor */
     padding: 10px;
-    margin-top: 20px; /* Margen superior para separación */
+    margin-top: 20px;
+    /* Margen superior para separación */
 }
 
 
 .member {
-    text-align: center; /* Centra el texto debajo de la imagen */
-    opacity: 0.5; /* Opacidad inicial de las imágenes */
-    transition: opacity 0.3s ease; /* Transición suave para el cambio de opacidad */
-    background-color: #273c27; /* Fondo del miembro, puedes cambiar el color */
-    padding: 10px; /* Espaciado interno alrededor de la imagen y texto */
+    text-align: center;
+    /* Centra el texto debajo de la imagen */
+    opacity: 0.5;
+    /* Opacidad inicial de las imágenes */
+    transition: opacity 0.3s ease;
+    /* Transición suave para el cambio de opacidad */
+    background-color: #273c27;
+    /* Fondo del miembro, puedes cambiar el color */
+    padding: 10px;
+    /* Espaciado interno alrededor de la imagen y texto */
     margin: 10px;
-    width: 400px; /* Ancho fijo para cada miembro, puedes ajustar este valor */
-    border-radius: 10px; /* Bordes redondeados, opcional */
+    width: 400px;
+    /* Ancho fijo para cada miembro, puedes ajustar este valor */
+    border-radius: 10px;
+    /* Bordes redondeados, opcional */
 }
 
 .member:hover {
-    opacity: 1; /* Opacidad completa al pasar el mouse */
+    opacity: 1;
+    /* Opacidad completa al pasar el mouse */
 }
 
 .member img {
-    width: 400px; /* Ajusta el tamaño fijo de las imágenes */
-    height: 500px; /* Ajusta el tamaño fijo de las imágenes */
-    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-    border-radius: 10px; /* Bordes redondeados, opcional */
-    margin-bottom: 10px; /* Agrega espacio entre la imagen y el texto */
+    width: 400px;
+    /* Ajusta el tamaño fijo de las imágenes */
+    height: 500px;
+    /* Ajusta el tamaño fijo de las imágenes */
+    object-fit: cover;
+    /* Mantiene la proporción y recorta si es necesario */
+    border-radius: 10px;
+    /* Bordes redondeados, opcional */
+    margin-bottom: 10px;
+    /* Agrega espacio entre la imagen y el texto */
 }
 
 .about-panel p {
-    margin-top: 10px 0; /* Espacio entre las imágenes y el texto de descripción */
-    text-align: center; /* Centra el texto */
-    color: #333; /* Cambia el color del texto, opcional */
+    margin-top: 10px 0;
+    /* Espacio entre las imágenes y el texto de descripción */
+    text-align: center;
+    /* Centra el texto */
+    color: #333;
+    /* Cambia el color del texto, opcional */
 }
 
 
@@ -91,7 +123,8 @@
     max-width: 25%;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Añade una transición de 0.3 segundos */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Añade una transición de 0.3 segundos */
 }
 
 .welcome-panel h1 {
@@ -101,21 +134,27 @@
 
 .welcome-panel p {
     font-size: 1.2em;
-    color: #fff; /* Texto en blanco para contraste */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Añade una transición al texto */
-    
+    color: #fff;
+    /* Texto en blanco para contraste */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Añade una transición al texto */
+
 }
 
 /* Efecto al pasar el mouse por encima del panel */
 .welcome-panel:hover img {
-    transform: scale(1.05); /* Agranda ligeramente la imagen */
-    opacity: 0.9; /* Reduce un poco la opacidad */
+    transform: scale(1.05);
+    /* Agranda ligeramente la imagen */
+    opacity: 0.9;
+    /* Reduce un poco la opacidad */
 }
 
 .welcome-panel:hover h1,
 .welcome-panel:hover p {
-    transform: translateY(-5px); /* Mueve el texto ligeramente hacia arriba */
-    opacity: 0.9; /* Reduce un poco la opacidad del texto */
+    transform: translateY(-5px);
+    /* Mueve el texto ligeramente hacia arriba */
+    opacity: 0.9;
+    /* Reduce un poco la opacidad del texto */
 }
 
 
@@ -124,14 +163,17 @@
 .hero {
     background-color: #ffffff;
     padding: 30px;
+    position: relative;
+    z-index: -1;
+    margin: auto;
     text-align: center;
     margin-top: 20px;
-   
+    width: 70%;
 }
 
 .hero h1 {
     font-size: larger;
-    
+
 }
 
 
@@ -139,6 +181,8 @@
 
 .charts {
     margin: 10px 0;
+    display: flex;
+    /**para que queden de lado**/
 }
 
 /* Estilo de bloques de texto de gráficos de consumo y producción, acceso rápido, noticias y referencias (Página de Inicio) */
@@ -155,45 +199,64 @@ section {
 /* Contenedor principal para Flexbox */
 .main-content {
     display: flex;
-    flex-direction: column; /* Coloca los elementos en columna */
-    flex: 1; /* Toma el espacio restante */
+    flex-direction: column;
+    /* Coloca los elementos en columna */
+    flex: 1;
+    /* Toma el espacio restante */
 }
 
-.main-content > section {
-    margin-bottom: 20px; /* Espacio entre secciones */
+.main-content>section {
+    margin-bottom: 20px;
+    /* Espacio entre secciones */
 }
 
 /* Panel de Noticias */
 .news {
-    background-color: #f9f9f9; /* Color de fondo del panel de noticias */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    width: 300px; /* Ancho fijo del panel de noticias */
-    position: absolute; /* Para posicionarlo a la derecha */
-    right: 0; /* Ajustar al lado derecho */
-    top: 160px; /* Ajustar para que quede debajo del panel de bienvenida */
+    background-color: #f9f9f9;
+    /* Color de fondo del panel de noticias */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    width: 300px;
+    /* Ancho fijo del panel de noticias */
+    position: absolute;
+    /* Para posicionarlo a la derecha */
+    right: 0;
+    /* Ajustar al lado derecho */
+    top: 160px;
+    /* Ajustar para que quede debajo del panel de bienvenida */
 }
 
 /* Estilo para los items de noticias */
 .news-item {
-    margin-bottom: 15px; /* Espaciado entre las noticias */
+    margin-bottom: 15px;
+    /* Espaciado entre las noticias */
 }
 
 .news-item img {
-    width: 100px; /* Ancho de la imagen */
-    height: auto; /* Altura automática para mantener proporciones */
+    width: 100px;
+    /* Ancho de la imagen */
+    height: auto;
+    /* Altura automática para mantener proporciones */
 }
 
 .news-item a {
-    display: block; /* Hacer que el enlace ocupe toda la línea */
-    margin-top: 5px; /* Espacio entre la imagen y el título */
-    color: #007BFF; /* Color del enlace */
-    text-decoration: none; /* Sin subrayado */
+    display: block;
+    /* Hacer que el enlace ocupe toda la línea */
+    margin-top: 5px;
+    /* Espacio entre la imagen y el título */
+    color: #007BFF;
+    /* Color del enlace */
+    text-decoration: none;
+    /* Sin subrayado */
 }
 
 .news-item a:hover {
-    text-decoration: underline; /* Subrayar al pasar el cursor */
+    text-decoration: underline;
+    /* Subrayar al pasar el cursor */
 }
 
 
@@ -202,38 +265,140 @@ section {
 .references {
     text-align: center;
     margin: 20px;
-    
+
 }
 
-.references ul {  
-    list-style-type: none; /* Elimina los puntos de la lista */  
-    padding: 0; /* Elimina el padding de la lista */  
-    margin: 0; /* Elimina el margin de la lista */  
-    display: flex; /* Alinea los elementos de la lista de forma horizontal */  
-}  
+.references ul {
+    list-style-type: none;
+    /* Elimina los puntos de la lista */
+    padding: 0;
+    /* Elimina el padding de la lista */
+    margin: 0;
+    /* Elimina el margin de la lista */
+    display: flex;
+    /* Alinea los elementos de la lista de forma horizontal */
+}
 
 .logo {
     display: flex;
     justify-content: center;
     margin: 10px;
     transition: transform 0.3s ease;
-    vertical-align: middle; /* Alinea el logo y el texto */
+    vertical-align: middle;
+    /* Alinea el logo y el texto */
 }
 
 .logo img {
-    width: 200px; /* Aumenta el tamaño de los logos */
+    width: 200px;
+    /* Aumenta el tamaño de los logos */
     height: 500px;
     border: none;
-    vertical-align: middle; /* Alinea la imagen verticalmente */
-}  
+    vertical-align: middle;
+    /* Alinea la imagen verticalmente */
+}
 
 
 .logo:hover {
-    transform: translateY(-10px); /* Eleva el logo al pasar el cursor */
+    transform: translateY(-10px);
+    /* Eleva el logo al pasar el cursor */
 }
 
 .name {
-    margin-left: 10px; /* Espacio entre el logo y el nombre */
-            font-size: 16px; /* Tamaño de la fuente */
-            vertical-align: middle; /* Alinea el texto verticalmente */
+    margin-left: 10px;
+    /* Espacio entre el logo y el nombre */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    vertical-align: middle;
+    /* Alinea el texto verticalmente */
+}
+
+/** emanuel **/
+
+/**loader**/
+
+/* Loader container */
+.loader-container {
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    width: 30px;
+    /* Tamaño más pequeño */
+    height: 30px;
+    /* Tamaño más pequeño */
+    z-index: 1;
+}
+
+/* Imagen del loader */
+.loader-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.charts {
+    display: flex;
+    /**para que queden de lado**/
+}
+
+.hero {
+    height: 400px;
+}
+
+#year_select {
+    position: absolute;
+    /** ubicar boton**/
+
+    left: 82%;
+    bottom: 77%;
+
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: #0a6c10;
+    color: white;
+    border: 2px solid #0a6c10;
+}
+
+.graf_2 {
+    width: 38%;
+    background-color: #273c27;
+    border: #ffffff;
+    border-radius: 15px;
+}
+
+.graf_2 h3 {
+    color: #ffffff;
+}
+
+.hot_map_section {
+    text-align: center;
+    top: 75px;
+    height: 70%;
+    padding: 30px;
+    border-radius: 18px;
+    border: 7px solid #273c27;
+    width: 60%;
+    margin-right: 2%;
+
+    background-color: #ffffff;
+}
+
+#hot_map {
+    position: relative;
+    top: 20px;
+    margin-bottom: 2%;
+}
+
+.boxes {
+    position: relative;
+    top: 50%;
+
+    float: left;
+    /* Flotar los divs */
+    margin: 1%;
+    /* Espacio entre divs */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
 }
