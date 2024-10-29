@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/inicio.css"> <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. Inicio) -->
     <link rel="stylesheet" href="css/estilo_global.css"> <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
     <link rel="stylesheet" href="css/inicio_responsive.css"> <!--Importo el archivo CSS correspondiente al diseño responsivo (pág.Inicio)-->
+    
 </head> <!-- CIERRA CABEZA -->
 
     <!-- Aquí se añadirá el contenido de la página -->
@@ -43,7 +44,62 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+         <!-- Panel de Bienvenida -->
+    <section class="welcome-panel">
+        <img src="images/logo.png" alt="7Bits Energy Logo">
+        <h1>¡Bienvenido a SevenBits Energy!</h1>
+        
+
+         <!-- Panel oculto de Sobre Nosotros -->
+    <div class="about-panel">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>En SevenBits Energy, nos encontramos un grupo de jóvenes programadores 
+            que nos dedicamos a promover el conocimiento sobre energías limpias para un futuro mejor.</p>
+        <div class="image-container">
+            <div class="member">
+                <img src="images/Darcy.jpeg" alt="Miembro 1">
+                <p>Darcy D. Andrade-Burgos</p>
+                <p>20 años</p>
+                <p>Estudiante Biología</p>
+            </div>
+            <div class="member">
+                <img src="images/Juanes.jpeg" alt="Miembro 2">
+                <p>Juan E. Salazar-Varón</p>
+                <p>18 años</p>
+                <p>Gestor de redes de datos</p>
+            </div>
+            <div class="member">
+                <img src="images/Dani.jpg" alt="Miembro 3">
+                <p>Daniela</p>
+                <p> años</p>
+                <p>Estudiante</p>
+            </div>
+            <div class="member">
+                <img src="images/Diego.jpeg" alt="Miembro 4">
+                <p>Diego A. Montoya-Giraldo</p>
+                <p>19 años</p>
+                <p>Desarrollador de software</p>
+            </div>
+            <div class="member">
+                <img src="images/Dani.jpg" alt="Miembro 5">
+                <p>Andrés</p>
+                <p> años</p>
+                <p>Estudiante</p>
+            </div>
+            <div class="member">
+                <img src="images/Dani.jpg" alt="Miembro 6">
+                <p>Emanuel</p>
+                <p> años</p>
+                <p>Estudiante</p>
+            </div>
+         </div>
+            
+     </div>
+
+    
+    </section>
+
+            <section class="hero">
             <h2>Producción y consumo de energía a nivel global</h2>
             <p>Accede a datos relevantes sobre energías renovables a nivel mundial.</p>
         </section>
@@ -66,28 +122,40 @@
         
         </section>
 
-        <section class="news">
-            <h3>Últimas Noticias sobre Energía Renovable</h3>
-            <div class="news-item">
-                <img src="news1.jpg" alt="Noticia 1">
-                <a href="link-a-noticia1.html">Título de la noticia 1</a>
-            </div>
-            <div class="news-item">
-                <img src="news2.jpg" alt="Noticia 2">
-                <a href="link-a-noticia2.html">Título de la noticia 2</a>
-            </div>
-            <div class="news-item">
-                <img src="news3.jpg" alt="Noticia 3">
-                <a href="link-a-noticia3.html">Título de la noticia 3</a>
-            </div>
-        </section>
+        <!-- Panel de Noticias -->
+    <section class="news">
+        <h3>Últimas Noticias sobre Energía Renovable</h3>
+        <div class="news-item">
+            <img src="images/eolica.png" alt="Noticia 1">
+            <a href="https://www.energias-renovables.com/eolica/minieolica-para-generar-energia-con-los-flujos-20241025"> Minieólica para generar energía con los flujos de aire artificiales ahora desaprovechados</a>
+        </div>
+        <div class="news-item">
+            <img src="images/solar.png" alt="Noticia 2">
+            <a href="https://www.energias-renovables.com/solar-termica/solar-heat-europe-aplaude-la-actualizacion-de-20240312"> Solar Heat Europe aplaude la actualización de la directiva sobre eficiencia energética de los edificios</a>
+        
+    </section>
 
         <section class="references">
-            <h3>Referentes en Energía Renovable</h3>
-            <ul>
-                <li><a href="https://www.irena.org/" target="_blank">IRENA</a></li>
-                <li><a href="https://www.nrel.gov/" target="_blank">NREL</a></li>
-                <li><a href="https://www.worldenergy.org/" target="_blank">World Energy Council</a></li>
+            <h4>Referentes en Energía Renovable</h4>
+            <ul style="display: flex ; justify-content: center;" >
+                <li class="logo">
+                    <a href="https://www.irena.org/" target="_blank">
+                        <img src="images/IRENA.png" alt="IRENA Logo" style="height: 150px; width: 250px;" >
+                        
+                    </a>
+                </li>
+                <li class="logo">
+                    <a href="https://www.nrel.gov/" target="_blank">
+                        <img src="images/NREL.png" alt="NREL Logo" style="height: 150px; width: 250px;">
+                        
+                    </a>
+                </li>
+                <li class="logo">
+                    <a href="https://www.worldenergy.org/" target="_blank">
+                        <img src="images/wec.png" alt="World Energy Council Logo" style="height: 150px; width: 250px;">
+                       
+                    </a>
+                </li>
             </ul>
         </section>
     </main>
