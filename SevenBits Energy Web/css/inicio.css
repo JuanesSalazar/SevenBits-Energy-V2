@@ -342,7 +342,7 @@ section {
 }
 
 .hero {
-    height: 400px;
+    height: 430px;
 }
 
 #year_select {
@@ -369,7 +369,7 @@ section {
 
 .graf_2 h3 {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 .hot_map_section {
@@ -407,3 +407,5 @@ section {
     border-radius: 8px;
     padding: 20px;
 }
+
+#consume_pie {}

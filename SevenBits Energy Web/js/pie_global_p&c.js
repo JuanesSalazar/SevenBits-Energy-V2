@@ -203,11 +203,14 @@ function drawPie() {
       letter
   );
 
-  console.log(
-    "https://docs.google.com/spreadsheets/d/1qgCxfs-W4XoH7p-loBzIL4p0ZILHR_-jVYBujzxZuV8/gviz/tq?gid=0&headers=1&tq=SELECT%20A%2C%20" +
+  const queryPieC = new google.visualization.Query(
+    "https://docs.google.com/spreadsheets/d/1J5N1Hm0UYCZGb9kJWg_GhURI4bfVJk_hwMaYZs3W9ag/gviz/tq?gid=0&headers=1&tq=SELECT%20A%2C%20" +
       letter
   );
 
+  console.log("vamos bien");
+
+  queryPieC.send(handleQueryResponsePieC);
   queryPie.send(handleQueryResponsePie); // Envía el query
 }
 
@@ -249,5 +252,41 @@ function handleQueryResponsePie(response) {
   //* tmb vease chart.draw(dataPie,optionsPie)
   chartPie.draw(dataPie, optionsPie); // dibuja el grafico segun indicaciones entre mas opciones
 
-  console.log("ah sido ejecutado");
+  console.log("ah sido ejecutado pie2");
+}
+
+function handleQueryResponsePieC(response) {
+  if (response.isError()) {
+    alert(
+      "Error en la consulta: " +
+        response.getMessage() +
+        " " +
+        response.getDetailedMessage()
+    );
+    return; //depuracion de errores
+  }
+
+  const dataPieC = response.getDataTable(); // tabla
+
+  const yearSelector = document.getElementById("year_select");
+  const optionsPieC = {
+    height: 350,
+    title: "Año " + yearSelector.value,
+    titleTextStyle: {
+      color: "#273c27",
+      fontSize: 21,
+    },
+    fontSize: 15,
+    is3D: true,
+    chartArea: { top: 70, width: "60%", height: "60%" },
+  }; // optiones y cofiguracion del grafico
+
+  const chartPieC = new google.visualization.PieChart(
+    document.getElementById("consume_pie")
+  ); // creal objeto del grafico y lo coloca en el div con su respectivo id
+
+  //* tmb vease chart.draw(dataPieC,optionsPieC)
+  chartPieC.draw(dataPieC, optionsPieC); // dibuja el grafico segun indicaciones entre mas opciones
+
+  console.log("ah sido ejecutado pie1");
 }

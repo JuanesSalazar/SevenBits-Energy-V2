@@ -1,16 +1,16 @@
 google.charts.load("current", { packages: ["corechart"] });
 
-google.charts.setOnLoadCallback(loadFullPie);
+google.charts.setOnLoadCallback(loadFullPieC);
 
-function loadFullPie() {
+function loadFullPieC() {
   // Inicializar el mapa
-  drawPie();
+  drawPieC();
   // Configurar el selector de año
   const yearSelector = document.getElementById("year_select");
   yearSelector.addEventListener("change", drawPie);
 }
 
-function columnaAño(selectedYear) {
+function columnaAñoC(selectedYear) {
   letter = "B";
   switch (selectedYear) {
     case 0:
@@ -193,25 +193,25 @@ function columnaAño(selectedYear) {
   return letter; // Retorna el valor de letter al final de la función
 }
 
-function drawPie() {
+function drawPieC() {
   const yearSelector = document.getElementById("year_select");
   const selectedYear = parseInt(yearSelector.value); //.value entrega el valor del HTML
   const letter = columnaAño(selectedYear);
   // Construir el queryString usando la letra que representa el año seleccionado
-  const queryPie = new google.visualization.Query(
-    "https://docs.google.com/spreadsheets/d/1qgCxfs-W4XoH7p-loBzIL4p0ZILHR_-jVYBujzxZuV8/gviz/tq?gid=0&headers=1&tq=SELECT%20A%2C%20" +
+  const queryPieC = new google.visualization.Query(
+    "https://docs.google.com/spreadsheets/d/1J5N1Hm0UYCZGb9kJWg_GhURI4bfVJk_hwMaYZs3W9ag/gviz/tq?gid=0&headers=1&tq=SELECT%20A%2C%20" +
       letter
   );
 
   console.log(
-    "https://docs.google.com/spreadsheets/d/1qgCxfs-W4XoH7p-loBzIL4p0ZILHR_-jVYBujzxZuV8/gviz/tq?gid=0&headers=1&tq=SELECT%20A%2C%20" +
+    "https://docs.google.com/spreadsheets/d/1J5N1Hm0UYCZGb9kJWg_GhURI4bfVJk_hwMaYZs3W9ag/gviz/tq?gid=0&headers=1&tq=SELECT%20A%2C%20" +
       letter
   );
 
-  queryPie.send(handleQueryResponsePie); // Envía el query
+  queryPieC.send(handleQueryResponsePieC); // Envía el query
 }
 
-function handleQueryResponsePie(response) {
+function handleQueryResponsePieC(response) {
   if (response.isError()) {
     alert(
       "Error en la consulta: " +
@@ -222,32 +222,27 @@ function handleQueryResponsePie(response) {
     return; //depuracion de errores
   }
 
-  const dataPie = response.getDataTable(); // tabla
+  const dataPieC = response.getDataTable(); // tabla
 
   const yearSelector = document.getElementById("year_select");
-  const optionsPie = {
+  const optionsPieC = {
     height: 350,
     title: "Año " + yearSelector.value,
     titleTextStyle: {
-      color: "white",
+      color: "#273c27",
       fontSize: 21,
     },
     fontSize: 15,
-    TextStyle: { color: "white" },
-    pieSliceTextStyle: { color: "white" }, // For pie slice labels
-    legend: "none",
     is3D: true,
-    backgroundColor: "#273c27",
-    chartArea: { top: 70, width: "100%", height: "150%" },
-    tooltipTextStyle: { color: "black" },
+    chartArea: { top: 70, width: "60%", height: "60%" },
   }; // optiones y cofiguracion del grafico
 
-  const chartPie = new google.visualization.PieChart(
-    document.getElementById("pie_global")
+  const chartPieC = new google.visualization.PieChart(
+    document.getElementById("consume_pie")
   ); // creal objeto del grafico y lo coloca en el div con su respectivo id
 
-  //* tmb vease chart.draw(dataPie,optionsPie)
-  chartPie.draw(dataPie, optionsPie); // dibuja el grafico segun indicaciones entre mas opciones
+  //* tmb vease chart.draw(dataPieC,optionsPieC)
+  chartPieC.draw(dataPieC, optionsPieC); // dibuja el grafico segun indicaciones entre mas opciones
 
-  console.log("ah sido ejecutado");
+  console.log("ah sido ejecutado pie1");
 }
