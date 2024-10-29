@@ -1,8 +1,14 @@
 /*       ***************************** PÁGINA DE ENERGÍA RENOVABLE  *************************************          */
-
+/* Estilo del placeholder para que sea visible */
+.search-container input::placeholder {
+    color: #888; /* Cambia este color si deseas un contraste mayor */
+    font-size: 16px;
+    opacity: 1; /* Asegura visibilidad */
+}
 
 /* Estilo general de la galería de encabezado de energía renovable
    Define la estructura principal de la galería, centrándola en la pantalla */
+
 
 .padre {
     display: flex;

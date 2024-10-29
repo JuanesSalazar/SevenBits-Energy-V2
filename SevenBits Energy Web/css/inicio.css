@@ -8,7 +8,14 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: #273c27;
+    backdrop-filter: blur(180px); /* Efecto de desenfoque para el cristal */
+    background: radial-gradient(at 87.13% 99.67%, rgb(2, 59, 0) 0%, hsla(83, 77%, 47%, 0) 100%), 
+                radial-gradient(at 28.45% 55.02%, rgb(69, 91, 18) 0%, hsla(77.9, 83.78%, 29.02%, 0) 100%), 
+                radial-gradient(at 22.85% 44.71%, rgb(33, 66, 0) 0%, hsla(50.04, 91.02%, 48.04%, 0) 100%), 
+                radial-gradient(at 82.56% 77.13%, rgb(41, 116, 6) 0%, hsla(101, 76.67%, 47.06%, 0) 100%), 
+                radial-gradient(at 61.94% 61.17%, rgb(15, 72, 4) 0%, hsla(77.9, 83.78%, 29.02%, 0) 100%);
+    background-blend-mode: overlay;
+    box-shadow: 0 8px 20px rgba(55, 59, 56, 0.041); /* Sombra debajo  */
     /* Fondo verde */
     padding: 40px;
     margin: 20px auto;
@@ -18,8 +25,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #fff;
     /* Texto en blanco para contraste */
-    background-color: #273c27;
     align-items: center;
+    font-size: larger;
     /* Centra los elementos horizontalmente   
  */
 
@@ -34,9 +41,18 @@
     /* Colocado justo debajo del panel principal */
     left: 0;
     right: 0;
-    background-color: #725b32;
+    backdrop-filter: blur(180px); /* Efecto de desenfoque para el cristal */
+    background: radial-gradient(at 87.13% 99.67%, rgb(196, 163, 17) 0%, hsla(101, 76.67%, 47.06%, 0) 100%), 
+                radial-gradient(at 28.45% 55.02%, rgb(116, 163, 7) 0%, hsla(77.9, 83.78%, 29.02%, 0) 100%), 
+                radial-gradient(at 22.85% 44.71%, rgb(142, 118, 2) 0%, hsla(50.04, 91.02%, 48.04%, 0) 100%), 
+                radial-gradient(at 66.68% 30.92%, rgb(137, 88, 4) 0%, hsla(38, 96%, 49.02%, 0) 100%), 
+                radial-gradient(at 82.56% 77.13%, rgb(41, 116, 6) 0%, hsla(101, 76.67%, 47.06%, 0) 100%), 
+                radial-gradient(at 61.94% 61.17%, rgb(10, 68, 0) 0%, hsla(77.9, 83.78%, 29.02%, 0) 100%);
+    background-blend-mode: overlay;
+    box-shadow: 0 8px 20px rgba(55, 59, 56, 0.041); /* Sombra debajo */
     /* Fondo para que el texto negro contraste */
     color: #ffffff;
+    font-size: small;
     /* Texto en negro */
     padding: 20px;
     border-radius: 10px;
