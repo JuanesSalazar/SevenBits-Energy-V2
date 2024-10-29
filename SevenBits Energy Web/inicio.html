@@ -109,7 +109,7 @@
         </section>
 
         <section class="charts">
-            <div class="hot_map_section boxes div1">
+            <div class="hot_map_section boxes">
                 <!--**********************************************-->
                 <h1>Produccion total de energías Renovables por pais</h1>
 
@@ -117,7 +117,7 @@
                 <div class="select-section">
                     <label for="year"></label>
                     <select id="year_select"> <!--*Selector del año para moverse entre los graficos-->
-                        <option value="0">Año</option>
+                        <option value="2021">Año</option>
                         <option value="2021">2021</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
@@ -183,9 +183,9 @@
 
             </div>
 
-            <div class="graf_2 boxes div2"><!--*Sin cambios aun-->
+            <div class="graf_2 boxes"><!--*Sin cambios aun-->
                 <h3>Producción total de energía por tipo a nivel global</h3>
-                <canvas id="energyProductionChart"></canvas>
+                <div id="pie_global"></div>
             </div>
         </section>
 
@@ -256,7 +256,8 @@
     <script src="js/script_global.js"></script>
     <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
     <script src="js/inicio.js"></script> <!-- Importo el archivo JS (Pág. Inicio)-->
-    <script src="js/hotMap.js"></script>
+    <script src="js/hotMap.js"></script><!--Script de dibujo del mapa de calor-->
+    <script src="js/pie_global_production.js"></script><!--Script de dibujo del pie de energias renovables-->
 </body> <!-- CIERRA CUERPO -->
 
 </html> <!-- CIERRA HTML -->

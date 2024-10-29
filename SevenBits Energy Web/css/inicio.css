@@ -369,6 +369,7 @@ section {
 
 .graf_2 h3 {
     color: #ffffff;
+    font-size: 30px;
 }
 
 .hot_map_section {
@@ -388,6 +389,10 @@ section {
     position: relative;
     top: 20px;
     margin-bottom: 2%;
+}
+
+.hot_map_section h1 {
+    font-size: 27px;
 }
 
 .boxes {
