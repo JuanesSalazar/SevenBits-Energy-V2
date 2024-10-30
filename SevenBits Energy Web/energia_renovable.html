@@ -5,14 +5,18 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head> <!-- EMPIEZA CABEZA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SevenBits Energy</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon"> <!-- Importo el icono de la página -->
-    <link rel="stylesheet" href="css/energia_renovable.css"> <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. Energía renovable) -->
-    <link rel="stylesheet" href="css/estilo_global.css"> <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
-    <link rel="stylesheet" href="css/energia_renovable_responsive.css"><!--Importo el archivo CSS correspondiente al diseño responsivo (pág. Energía renovable)-->
+    <link rel="stylesheet" href="css/energia_renovable.css">
+    <!-- Importo el archivo CSS correspondiente a la funcionalidad (pág. Energía renovable) -->
+    <link rel="stylesheet" href="css/estilo_global.css">
+    <!-- Importo el archivo CSS correspondiente al cuerpo de (todas las páginas)-->
+    <link rel="stylesheet" href="css/energia_renovable_responsive.css">
+    <!--Importo el archivo CSS correspondiente al diseño responsivo (pág. Energía renovable)-->
 </head> <!-- CIERRA CABEZA -->
 
 <!-- Aquí se añadirá el contenido de la página -->
@@ -29,7 +33,7 @@
                 <li><a href="energia_renovable.html" class="active">Energías renovables</a></li>
                 <li><a href="paises.html">Regiones y países</a></li>
             </ul>
-        </nav>        
+        </nav>
         <div class="search-container">
             <input type="text" placeholder="Buscar" id="search-input">
             <button id="search-button"><img src="images/search-icon.png" alt="Buscar"></button>
@@ -37,244 +41,261 @@
         </div>
     </header>
 
-<!-- Sección de Banner Carrusel -->
-<div class="contenedor2">
-    <div class="slide">
-        <div class="item" style="background-image: url(images/energia_asq.jpg);">
-            <div class="contenedor21">
-                <div class="name">Energía asequible</div>
-                <div class="des">Apoya empresas, sector médico, educativo, agricultura, infraestructuras, comunicaciones y alta tecnología.</div>
-                <a href="https://www.un.org/sustainabledevelopment/es/energy/"" target="_blank"><button>Leer artículo.</button></a>
-                </div>
-        </div>
-        <div class="item" style="background-image: url(images/futur_sost.jpg);">
-            <div class="contenedor21">
-                <div class="name">Futuro sostenible</div>
-                <div class="des">Equilibrio entre el crecimiento económico, la inclusión social 
-                    y la protección del medio ambiente (ONU).
-                </div>
-                <a href="https://www.nationalgeographicla.com/medio-ambiente/2023/12/que-es-el-desarrollo-sostenible-y-por-que-es-importante"" target="_blank"><button>Leer artículo.</button></a>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(images/desarrollo_sos.jpg);">
-            <div class="contenedor21">
-                <div class="name">Desarrollo sostenible</div>
-                <div class="des">Busca un equilibrio entre satisfacer las necesidades actuales sin poner en riesgo
-                    el futuro de las próximas generaciones. </div>
-                    <a href="https://www.un.org/sustainabledevelopment/es/2023/08/what-is-sustainable-development/"" target="_blank"><button>Leer artículo.</button></a>
-                </div>
-        </div>
-        
-        <div class="item" style="background-image: url(images/metas_ds.jpg);">
-            <div class="contenedor21">
-                <div class="name">Metas de desarrollo sostenible</div>
-                <div class="des">Interconectan desafíos globales como pobreza, desigualdad, clima, paz y justicia.</div>
-                <a href="https://www.un.org/sustainabledevelopment/es/sustainable-development-goals/"" target="_blank"><button>Leer artículo.</button></a>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(images/cambio_clim.jpg);">
-            <div class="contenedor21">
-                <div class="name">Cambio climático</div>
-                <div class="des">Se avecina un cataclismo climático y no estamos preparados para las posibles consecuencias.</div>
-                <a href="https://www.un.org/sustainabledevelopment/es/climate-change-2/"" target="_blank"><button>Leer artículo.</button></a>
-            </div>
-        </div>
-    </div>
-    <!--Botón de Carrusel de imágenes -->
-    <div class="button">
-        <button class="prev">
-            <img src="/images/left-arow.jpg" alt="" class="imagen-flecha">
-        </button>
-        <button class="next">
-            <img src="/images/right-arow.jpg" alt="" class="imagen-flecha">
-        </button>
-    </div>
-    
-</div>
-
-
-<!-- Sección de energías renovables.-->
-        <section class="energy-section-interactive">
-            <br>
-            <div class="interactive-container">
-                <div class="info">
-                    <h2>¿Qué es la energía renovable?</h2><br>
-                    <h4>Es aquella que se obtiene a partir de fuentes naturales inagotables, que no utilizan combustibles fósiles. Utilizar energía 
-                        renovable reduce la dependencia de combustibles fósiles y disminuye las emisiones de gases de efecto invernadero, 
-                        lo que contribuye al combate contra el cambio climático.</h3>
-                </div>
-                <div class="image-container">
-                    <img id="image1" src="images/image1.jpg" alt="Energía Renovable" onmouseover="changeImage()" onmouseout="resetImage()">
+    <!-- Sección de Banner Carrusel -->
+    <div class="contenedor2">
+        <div class="slide">
+            <div class="item" style="background-image: url(images/energia_asq.jpg);">
+                <div class="contenedor21">
+                    <div class="name">Energía asequible</div>
+                    <div class="des">Apoya empresas, sector médico, educativo, agricultura, infraestructuras,
+                        comunicaciones y alta tecnología.</div>
+                    <a href="https://www.un.org/sustainabledevelopment/es/energy/" target="_blank"><button>Leer
+                            artículo.</button></a>
                 </div>
             </div>
-        </section>
+            <div class="item" style="background-image: url(images/futur_sost.jpg);">
+                <div class="contenedor21">
+                    <div class="name">Futuro sostenible</div>
+                    <div class="des">Equilibrio entre el crecimiento económico, la inclusión social
+                        y la protección del medio ambiente (ONU).
+                    </div>
+                    <a href="https://www.nationalgeographicla.com/medio-ambiente/2023/12/que-es-el-desarrollo-sostenible-y-por-que-es-importante"
+                        target="_blank"><button>Leer artículo.</button></a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/desarrollo_sos.jpg);">
+                <div class="contenedor21">
+                    <div class="name">Desarrollo sostenible</div>
+                    <div class="des">Busca un equilibrio entre satisfacer las necesidades actuales sin poner en riesgo
+                        el futuro de las próximas generaciones. </div>
+                    <a href="https://www.un.org/sustainabledevelopment/es/2023/08/what-is-sustainable-development/"
+                        target="_blank"><button>Leer artículo.</button></a>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(images/metas_ds.jpg);">
+                <div class="contenedor21">
+                    <div class="name">Metas de desarrollo sostenible</div>
+                    <div class="des">Interconectan desafíos globales como pobreza, desigualdad, clima, paz y justicia.
+                    </div>
+                    <a href="https://www.un.org/sustainabledevelopment/es/sustainable-development-goals/"
+                        target="_blank"><button>Leer artículo.</button></a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/cambio_clim.jpg);">
+                <div class="contenedor21">
+                    <div class="name">Cambio climático</div>
+                    <div class="des">Se avecina un cataclismo climático y no estamos preparados para las posibles
+                        consecuencias.</div>
+                    <a href="https://www.un.org/sustainabledevelopment/es/climate-change-2/"
+                        target="_blank"><button>Leer artículo.</button></a>
+                </div>
+            </div>
+        </div>
+        <!--Botón de Carrusel de imágenes -->
+        <div class="button">
+            <button class="prev">
+                <img src="/images/left-arow.jpg" alt="" class="imagen-flecha">
+            </button>
+            <button class="next">
+                <img src="/images/right-arow.jpg" alt="" class="imagen-flecha">
+            </button>
+        </div>
+
+    </div>
 
 
-<!-- Tipos de energía renovable  -->
-
-<section class="hero-section">
-    <div class="card-container"> 
-    <div class="card">
-    <div class="card-background" style="background-image: url(images/image4.webp);"></div>
-    <div class="contenedor">
-    <div class="card-category">Energía Renovable</div>
-    <h3 class="card-heading">Solar</h3>
-    </div>
-    </div>
-    <div class="card">
-    <div class="card-background" style="background-image: url(images/image5.jpg);"></div>
-    <div class="contenedor">
-    <div class="card-category">Energía Renovable</div>
-    <h3 class="card-heading">Eólica</h3>
-    </div>
-    </div>
-    <div class="card">
-    <div class="card-background" style="background-image: url(images/image6.jpg);"></div>
-    <div class="contenedor">
-    <div class="card-category"> Energía Renovable </div>
-    <h3 class="card-heading">Biomasa</h3>
-    </div>
-    </div>
-    <div class="card">
-    <div class="card-background" style="background-image: url(images/image7.png);"></div>
-    <div class="contenedor">
-    <div class="card-category"> Energía Renovable </div>
-    <h3 class="card-heading">Geotérmica</h3>
-    </div>
-    </div>
-    <div class="card">
-    <div class="card-background" style="background-image: url(images/image8.png);"></div>
-    <div class="contenedor">
-    <div class="card-category"> Energía Renovable </div>
-    <h3 class="card-heading">Hidroeléctrica</h3>
-    </div>
-    </div>
-    </div>
+    <!-- Sección de energías renovables.-->
+    <section class="energy-section-interactive">
+        <br>
+        <div class="interactive-container">
+            <div class="info">
+                <h2>¿Qué es la energía renovable?</h2><br>
+                <h4>Es aquella que se obtiene a partir de fuentes naturales inagotables, que no utilizan combustibles
+                    fósiles. Utilizar energía renovable reduce la dependencia de combustibles fósiles y disminuye las
+                    emisiones de gases de efecto invernadero, lo que contribuye al combate contra el cambio climático.
+                </h4>
+            </div>
+            <div class="image-container">
+                <img id="image1" src="images/image1.jpg" alt="Energía Renovable" onmouseover="changeImage()"
+                    onmouseout="resetImage()">
+            </div>
+        </div>
     </section>
 
-<!-- -->
-        <section class="energy-section">
-            <div class="energy-grid">
-                <div class="energy-card">
-                    <h3>Solar</h3>
-                    <p>Energía obtenida a partir de la radiación solar. Paneles solares capturan la energía para convertirla en electricidad.</p>
-                    <ul>
-                        <li>Paneles solares</li>
-                        <li>Clima soleado ideal</li>
-                        <li>Genera electricidad</li>
-                    </ul>
-                </div>
-                <div class="energy-card">
-                    <h3>Eólica</h3>
-                    <p>Energía generada por el movimiento de las turbinas impulsadas por el viento.</p>
-                    <ul>
-                        <li>Velocidad del viento mínima: 15 km/h</li>
-                        <li>Turbinas en zonas abiertas</li>
-                        <li>Sin emisiones de carbono</li>
-                    </ul>
-                </div>
-                <div class="energy-card">
-                    <h3>Biomasa</h3>
-                    <p>Se obtiene de la materia orgánica, como residuos de cultivos o madera, para generar energía.</p>
-                    <ul>
-                        <li>Materia orgánica</li>
-                        <li>Residuos agrícolas</li>
-                        <li>Generación térmica</li>
-                    </ul>
-                </div>
-                <div class="energy-card">
-                    <h3>Geotérmica</h3>
-                    <p>Aprovecha el calor interno de la Tierra para producir electricidad o calefacción.</p>
-                    <ul>
-                        <li>Calor subterráneo</li>
-                        <li>Ideal en zonas volcánicas</li>
-                        <li>Eficiente para calefacción</li>
-                    </ul>
-                </div>
-                <div class="energy-card">
-                    <h3>Hidroeléctrica</h3>
-                    <p>La energía del agua en movimiento se usa para generar electricidad.</p>
-                    <ul>
-                        <li>Generación en represas</li>
-                        <li>Flujo constante de agua</li>
-                        <li>Gran capacidad energética</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
 
-        <!-- Graficos y estadísticas -->
-        <div class="content"> <!--Tabla para cálculo de producción de energía renovable -->
-            <div class="map-section">
-                <h1><center>Producción de energía renovable por país</center></h1><br>
-                <div class="filter-section">
-                    <label for="pais-produccion"></label>
-                    <select id="pais-produccion">
-                        <option value="">País</option>
-                    </select>
-                    <label for="energia-produccion"></label>
-                    <select id="energia-produccion">
-                        <option value="">Tipo de energía</option>
-                    </select>
-                    <label for="anio-produccion"></label>
-                    <select id="anio-produccion">
-                        <option value="">Año</option>
-                    </select>
-                    <button id="enviar-btn-produccion">Enviar</button>
+    <!-- Tipos de energía renovable  -->
+
+    <section class="hero-section">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-background" style="background-image: url(images/image4.webp);"></div>
+                <div class="contenedor">
+                    <div class="card-category">Energía Renovable</div>
+                    <h3 class="card-heading">Solar</h3>
                 </div>
-                <br>
-                <p>En el <span id="anio-seleccionado-produccion">Año*</span>, el país <span id="pais-seleccionado-produccion">País*</span> produjo ***** KW en energía <span id="energia-generada-produccion"></span></p>
-                <div class="image-section">
-                    <img src="images/map.png" alt="Mapamundi">
-                    <img src="images/house.png" alt="Casas">
-                </div>                
-                <p>Esta producción equivale a la energía de <span id="casas-equivalente">###</span> casas</p>
             </div>
-            <div class="ranking-section">
-                <h2>Ranking de producción</h2>
+            <div class="card">
+                <div class="card-background" style="background-image: url(images/image5.jpg);"></div>
+                <div class="contenedor">
+                    <div class="card-category">Energía Renovable</div>
+                    <h3 class="card-heading">Eólica</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-background" style="background-image: url(images/image6.jpg);"></div>
+                <div class="contenedor">
+                    <div class="card-category"> Energía Renovable </div>
+                    <h3 class="card-heading">Biomasa</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-background" style="background-image: url(images/image7.png);"></div>
+                <div class="contenedor">
+                    <div class="card-category"> Energía Renovable </div>
+                    <h3 class="card-heading">Geotérmica</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-background" style="background-image: url(images/image8.png);"></div>
+                <div class="contenedor">
+                    <div class="card-category"> Energía Renovable </div>
+                    <h3 class="card-heading">Hidroeléctrica</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -->
+    <section class="energy-section">
+        <div class="energy-grid">
+            <div class="energy-card">
+                <h3>Solar</h3>
+                <p>Energía obtenida a partir de la radiación solar. Paneles solares capturan la energía para convertirla
+                    en electricidad.</p>
                 <ul>
-                    <?php include 'ranking.php'; ?>
+                    <li>Paneles solares</li>
+                    <li>Clima soleado ideal</li>
+                    <li>Genera electricidad</li>
                 </ul>
             </div>
-        </div> <!--Fin de tabla para cálculo de producción de energía renovable -->
-
-        <br>
-        <div class="content2"> <!--Tabla para cálculo de consumo de energía  -->
-            <div class="ranking-section2">
-                <h2>Ranking de consumo</h2>
+            <div class="energy-card">
+                <h3>Eólica</h3>
+                <p>Energía generada por el movimiento de las turbinas impulsadas por el viento.</p>
                 <ul>
-                    <?php include 'ranking.php'; ?>
+                    <li>Velocidad del viento mínima: 15 km/h</li>
+                    <li>Turbinas en zonas abiertas</li>
+                    <li>Sin emisiones de carbono</li>
                 </ul>
             </div>
-            <div class="map-section2">
-                <h1><center>Consumo de energía por país</center></h1><br>
-                <div class="filter-section2">
-                    <label for="pais-consumo"></label>
-                    <select id="pais-consumo">
-                        <option value="">País</option>
-                    </select>
-                    <label for="energia-consumo"></label>
-                    <select id="energia-consumo">
-                        <option value="">Tipo de energía</option>
-                    </select>
-                    <label for="anio-consumo"></label>
-                    <select id="anio-consumo">
-                        <option value="">Año</option>
-                    </select>
-                    <button id="enviar-btn-consumo">Enviar</button>
-                </div>
-                <br>
-                <p>En el <span id="anio-seleccionado-consumo">Año*</span>, el país <span id="pais-seleccionado-consumo">País*</span> tuvo un consumo de ***** KW en energía <span id="energia-generada-consumo"></span></p>
-                <div class="image-section2">
-                    <img src="images/map.png" alt="Mapamundi">
-                    <img src="images/house.png" alt="Casas">
-                </div>                
-                <p>Esta producción equivale a la energía de <span id="casas-equivalente">###</span> casas</p>
+            <div class="energy-card">
+                <h3>Biomasa</h3>
+                <p>Se obtiene de la materia orgánica, como residuos de cultivos o madera, para generar energía.</p>
+                <ul>
+                    <li>Materia orgánica</li>
+                    <li>Residuos agrícolas</li>
+                    <li>Generación térmica</li>
+                </ul>
             </div>
-        </div> <!--Fin de tabla para cálculo de consumo de energía  -->
+            <div class="energy-card">
+                <h3>Geotérmica</h3>
+                <p>Aprovecha el calor interno de la Tierra para producir electricidad o calefacción.</p>
+                <ul>
+                    <li>Calor subterráneo</li>
+                    <li>Ideal en zonas volcánicas</li>
+                    <li>Eficiente para calefacción</li>
+                </ul>
+            </div>
+            <div class="energy-card">
+                <h3>Hidroeléctrica</h3>
+                <p>La energía del agua en movimiento se usa para generar electricidad.</p>
+                <ul>
+                    <li>Generación en represas</li>
+                    <li>Flujo constante de agua</li>
+                    <li>Gran capacidad energética</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        
+
+    <!-- Graficos y estadísticas -->
+    <div class="content"> <!--Tabla para cálculo de producción de energía renovable -->
+        <div class="map-section">
+            <h1>
+                <center>Producción de energía renovable por país</center>
+            </h1><br>
+            <div class="filter-section">
+                <label for="pais-produccion"></label>
+                <select id="pais-produccion">
+                    <option value="">País</option>
+                </select>
+                <label for="energia-produccion"></label>
+                <select id="energia-produccion">
+                    <option value="">Tipo de energía</option>
+                </select>
+                <label for="anio-produccion"></label>
+                <select id="anio-produccion">
+                    <option value="">Año</option>
+                </select>
+                <button id="enviar-btn-produccion">Enviar</button>
+            </div>
+            <br>
+            <p>En el <span id="anio-seleccionado-produccion">Año*</span>, el país <span
+                    id="pais-seleccionado-produccion">País*</span> produjo ***** KW en energía <span
+                    id="energia-generada-produccion"></span></p>
+            <div class="image-section">
+                <img src="images/map.png" alt="Mapamundi">
+                <img src="images/house.png" alt="Casas">
+            </div>
+            <p>Esta producción equivale a la energía de <span id="casas-equivalente-produccion">###</span> casas</p>
+        </div>
+        <div class="ranking-section">
+            <h2>Ranking de producción</h2>
+            <ul>
+                <?php include 'ranking.php'; ?>
+            </ul>
+        </div>
+    </div> <!--Fin de tabla para cálculo de producción de energía renovable -->
+
+    <br>
+    <div class="content2"> <!--Tabla para cálculo de consumo de energía  -->
+        <div class="ranking-section2">
+            <h2>Ranking de consumo</h2>
+            <ul>
+                <!---<?php include 'ranking.php'; ?>--->
+                <!--!error en linea, Error: ¿Vio <?. Causa probable: Intento de utilizar una instrucción de procesamiento XML en HTML. (Las instrucciones de procesamiento XML no son compatibles con HTML).-->
+
+            </ul>
+        </div>
+        <div class="map-section2">
+            <h1 class="center">Consumo de energía por país</h1><br>
+            <div class="filter-section2">
+                <label for="pais-consumo"></label>
+                <select id="pais-consumo">
+                    <option value="">País</option>
+                </select>
+                <label for="energia-consumo"></label>
+                <select id="energia-consumo">
+                    <option value="">Tipo de energía</option>
+                </select>
+                <label for="anio-consumo"></label>
+                <select id="anio-consumo">
+                    <option value="">Año</option>
+                </select>
+                <button id="enviar-btn-consumo">Enviar</button>
+            </div>
+            <br>
+            <p>En el <span id="anio-seleccionado-consumo">Año*</span>, el país <span
+                    id="pais-seleccionado-consumo">País*</span> tuvo un consumo de ***** KW en energía <span
+                    id="energia-generada-consumo"></span></p>
+            <div class="image-section2">
+                <img src="images/map.png" alt="Mapamundi">
+                <img src="images/house.png" alt="Casas">
+            </div>
+            <p>Esta producción equivale a la energía de <span id="casas-equivalente-consumo">###</span> casas</p>
+        </div>
+    </div> <!--Fin de tabla para cálculo de consumo de energía  -->
 
 
 
@@ -282,7 +303,9 @@
 
 
 
-        <br><br><br><br>
+
+
+    <br><br><br><br>
     </main>
 
 
@@ -293,12 +316,14 @@
     <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
         <div class="arrow">&#8679;</div>
     </div>
-    
 
 
-    
-    <script src="js/script_global.js"></script> <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
+
+
+    <script src="js/script_global.js"></script>
+    <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
     <script src="js/energia.js"></script> <!-- Importo el archivo JS (Pág. Energía renovable)-->
 
 </body> <!-- CIERRA CUERPO -->
+
 </html> <!-- CIERRA HTML -->
