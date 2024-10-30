@@ -427,3 +427,7 @@ section {
     border-radius: 8px;
     padding: 20px;
 }
+
+.center {
+    text-align: center;
+}
