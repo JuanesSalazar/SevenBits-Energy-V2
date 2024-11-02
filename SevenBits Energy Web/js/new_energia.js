@@ -69,7 +69,13 @@ class EnergyPopupManager {
     // Manejador para las tarjetas de energía
     document.querySelectorAll(".energy-card").forEach((card) => {
       card.addEventListener("click", () => {
-        this.showEnergyChart(card.id);
+        this.showEnergyChart(card.getAttribute("Card"));
+      });
+    });
+      
+      document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", () => {
+        this.showEnergyChart(card.getAttribute("Card"));
       });
     });
   }
@@ -77,6 +83,7 @@ class EnergyPopupManager {
   showEnergyChart(cardId) {
     const config = ENERGY_CONFIGS[cardId] || ENERGY_CONFIGS["eolica-card"];
 
+    console.log(cardId);
     // Mostrar popup
     this.popover.style.display = "block";
     this.overlay.style.display = "block";
@@ -119,7 +126,7 @@ class EnergyPopupManager {
 }
 
 //       *****************************  Gestor de Consultas   *****************************
-//! Pendiente mejorar la eficiencia de este codigo para que sea una sola funccion segun la seeccion (consumo/produccion)
+//! Pendiente mejorar la eficiencia de este codigo para que sea una sola funccion segun la seeccion
 
 // Comprueba que se seleccionen todos los campos
 function validarSeleccion(X, Y, Z) {
