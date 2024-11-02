@@ -1,7 +1,7 @@
 //       *****************************  PÁGINA DE ENERGÍA RENOVABLE   *****************************
 
-//API Ema
-google.charts.load("current", { packages: ["corechart"] });
+//Carga del package de la api que se usa
+google.charts.load("current", { packages: ["corechart", "line"] });
 
 //! Emanuel no uso este codigo
 //? // Función para rellenar dropdowns
@@ -100,6 +100,207 @@ google.charts.load("current", { packages: ["corechart"] });
 //? rellenarDropdown(dropdownsConsumo.pais, paises);
 //? rellenarDropdown(dropdownsConsumo.energia, tiposEnergia);
 //? rellenarDropdown(dropdownsConsumo.anio, anios);
+
+//! const popUpCard = document.querySelectorAll(".energy-card");
+//! const popover = document.getElementById("my-popover");
+//!
+//! popUpCard.forEach((popUpCard) => {
+//!   popUpCard.addEventListener("click", click);
+//! });
+//!
+//! let n = 0;
+//!
+//! function click() {
+//!   n += 1;
+//!   console.log("clicl " + n);
+//!   popover.style.display = "block";
+//! }
+
+//*PopUp
+
+const popover = document.getElementById("my-popover");
+const overlay = document.getElementById("overlay");
+const closeButton = document.getElementById("close-button");
+
+// Cerrar el pop-up
+closeButton.addEventListener("click", hidePopover);
+overlay.addEventListener("click", hidePopover);
+
+// Mostrar el pop-up y dibujar el gráfico correspondiente
+document.querySelectorAll(".energy-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const cardId = card.getAttribute("id");
+    drawEnergy(cardId); // Llama a la función para dibujar el gráfico con el query correspondiente
+    showPopover();
+  });
+});
+
+function showPopover() {
+  popover.style.display = "block"; // Muestra el pop-up
+  overlay.style.display = "block"; // Muestra el fondo oscuro
+}
+
+function hidePopover() {
+  popover.style.display = "none"; // Oculta el pop-up
+  overlay.style.display = "none"; // Oculta el fondo oscuro
+  document.getElementById("graf_energy_type").innerHTML = ""; // Limpia el contenido del gráfico
+}
+
+function drawEnergy(cardId) {
+  // Aquí defines la lógica de tus queries dependiendo de la tarjeta clickeada
+
+  switch (cardId) {
+    case "solar-card":
+      url =
+        "https://docs.google.com/spreadsheets/d/1V7JrHfZm393C9cTROn1oXdzkQF-aEh_aJ5-DmDxmguc";
+      offsetCard = 25;
+      optionsCardEnergy = {
+        hAxis: {
+          title: "Año",
+        },
+        vAxis: {
+          title: "TWh",
+        },
+        height: 350,
+        title: "Produccion de energia Solar",
+        fontSize: 20,
+        // Permite seleccion multiple
+        selectionMode: "multiple",
+        // Muestra el recuadro de info solo si se selecciona
+        //tooltip: { trigger: "selection" },
+        // Group selections
+        // by x-value.
+        //aggregationTarget: "category",
+        //chartArea: { left: 20, top: 0, width: "50%", height: "75%" },
+      };
+      break;
+    case "eolica-card":
+      url =
+        "https://docs.google.com/spreadsheets/d/1TqkvqbQIslSd1CCvJL6zBVVvA25Md4bLQKoCOb2Zh5E";
+      offsetCard = 25;
+      optionsCardEnergy = {
+        hAxis: {
+          title: "Año",
+        },
+        vAxis: {
+          title: "TWh",
+        },
+        height: 350,
+        title: "Produccion de energia Eolica",
+        fontSize: 20,
+        selectionMode: "multiple",
+      };
+      break;
+    case "biomasa-card":
+      url =
+        "https://docs.google.com/spreadsheets/d/1i4TAi_5Z7w0CRTtFhSCL8g6xAsfL_rwuVHQkjDaEkq8";
+      offsetCard = 0;
+      optionsCardEnergy = {
+        hAxis: {
+          title: "Año",
+        },
+        vAxis: {
+          title: "TWh",
+        },
+        height: 350,
+        title: "Produccion de energia de Biomasas",
+        fontSize: 20,
+        selectionMode: "multiple",
+      };
+      break;
+    case "geotermica-card":
+      url =
+        "https://docs.google.com/spreadsheets/d/1SoOM2ZbR6fM0aqzswv8-F6oZI2x2OfajDtyLFsTXmmM"; //! Capacity
+      offsetCard = 0;
+      optionsCardEnergy = {
+        hAxis: {
+          title: "Año",
+        },
+        vAxis: {
+          title: "Capacidad",
+        },
+        height: 350,
+        title: "Capcidad de energia Geotermica",
+        fontSize: 20,
+        selectionMode: "multiple",
+      };
+      break;
+    case "hidroeléctrica-card":
+      url =
+        "https://docs.google.com/spreadsheets/d/1kMsCHZOu2HJ8TAMytBAqzq9JsQY7eFWrV8_vrp91ANI";
+      offsetCard = 25;
+      optionsCardEnergy = {
+        hAxis: {
+          title: "Año",
+        },
+        vAxis: {
+          title: "TWh",
+        },
+        height: 350,
+        title: "Produccion de energia Hidroelectrica",
+        fontSize: 20,
+        selectionMode: "multiple",
+      };
+      break;
+    default:
+      url =
+        "https://docs.google.com/spreadsheets/d/1TqkvqbQIslSd1CCvJL6zBVVvA25Md4bLQKoCOb2Zh5E";
+      offsetCard = 25;
+      optionsCardEnergy = {
+        height: 350,
+        hAxis: {
+          title: "Año",
+        },
+        vAxis: {
+          title: "TWh",
+        },
+        height: 350,
+        title: "Produccion de energia Eolica",
+        fontSize: 20,
+        selectionMode: "multiple",
+      };
+  }
+
+  const queryStringCard = encodeURIComponent(
+    "SELECT A, B, C, D, E, F OFFSET " + offsetCard
+  ); // modifica parte de la urle segun el rango indicado
+
+  const queryCard = new google.visualization.Query(
+    url + "/gviz/tq?gid=0&headers=1&tq=" + queryStringCard
+  ); // agrega informacion al url
+
+  queryCard.send(handleQueryResponseEnergy);
+}
+
+function handleQueryResponseEnergy(response) {
+  if (response.isError()) {
+    alert(
+      "Error en la consulta: " +
+        response.getMessage() +
+        " " +
+        response.getDetailedMessage()
+    );
+    return; //depuración de errores
+  }
+
+  const dataCardEnergy = response.getDataTable(); // tabla
+
+  //* const optionsCardEnergy = {
+  //*   leyend: "hello",
+  //*   height: 300,
+  //* }; // opciones y configuración del gráfico
+
+  const chartCardEnergy = new google.charts.Line(
+    document.getElementById("graf_energy_type")
+  ); // crear objeto del gráfico y lo coloca en el div con su respectivo id
+
+  chartCardEnergy.draw(
+    dataCardEnergy,
+    google.charts.Line.convertOptions(optionsCardEnergy)
+  ); // dibuja el gráfico según indicaciones entre más opciones
+}
+
+//*Consultas
 
 // Comprueba que se seleccionen todos los campos
 function validarSeleccion(X, Y, Z) {
@@ -260,7 +461,8 @@ document
               yearSelectC;
             document.getElementById("pais-seleccionado-consumo").innerHTML =
               countrySelectC;
-            document.getElementById("twh-consumo").innerHTML = consumo;
+            document.getElementById("twh-consumo").innerHTML =
+              consumo.toFixed(2);
             document.getElementById("energia-generada-consumo").innerHTML =
               energySelectC;
 
@@ -271,7 +473,7 @@ document
               ).toFixed(2); // Calcula el consumo en millones de casas
             } else {
               document.getElementById(
-                "casas-equivalente-conusmo"
+                "casas-equivalente-consumo"
               ).innerHTML = 0;
             }
 

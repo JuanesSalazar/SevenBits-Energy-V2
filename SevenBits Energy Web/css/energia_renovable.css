@@ -1,9 +1,11 @@
 /*       ***************************** PÁGINA DE ENERGÍA RENOVABLE  *************************************          */
 /* Estilo del placeholder para que sea visible */
 .search-container input::placeholder {
-    color: #888; /* Cambia este color si deseas un contraste mayor */
+    color: #888;
+    /* Cambia este color si deseas un contraste mayor */
     font-size: 16px;
-    opacity: 1; /* Asegura visibilidad */
+    opacity: 1;
+    /* Asegura visibilidad */
 }
 
 /* Estilo general de la galería de encabezado de energía renovable
@@ -14,26 +16,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
-    height: 100vh; 
+    position: relative;
+    height: 100vh;
 }
 
 /* Contenedor de la galería
    Establece un cuadro de fondo y sombra para la galería */
 .contenedor2 {
-    position: relative; 
+    position: relative;
     width: auto;
     height: 300px;
     background: #f5f5f5;
     box-shadow: 0 30px 35px #dbdbdb;
     justify-content: center;
-    margin: 0%; 
+    margin: 0%;
     margin-bottom: 5%;
 }
 
 /* Estilo de cada elemento individual en la galería
    Define los elementos individuales con forma y sombras */
-.contenedor2 .slide .item{
+.contenedor2 .slide .item {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -51,7 +53,7 @@
 
 /* Posiciona los dos primeros elementos para ocupar todo el ancho y alto del contenedor */
 .slide .item:nth-child(1),
-.slide .item:nth-child(2){
+.slide .item:nth-child(2) {
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -61,25 +63,27 @@
 }
 
 /* Posición de los elementos sucesivos en el carrusel */
-.slide .item:nth-child(3){
+.slide .item:nth-child(3) {
     left: 50%;
 }
-.slide .item:nth-child(4){
+
+.slide .item:nth-child(4) {
     left: calc(50% + 220px);
 }
-.slide .item:nth-child(5){
+
+.slide .item:nth-child(5) {
     left: calc(50% + 440px);
 }
 
 /* Oculta elementos adicionales en el carrusel después de la quinta posición */
-.slide .item:nth-child(n + 6){
+.slide .item:nth-child(n + 6) {
     left: calc(50% + 660px);
     opacity: 0;
 }
 
 /* Contenedor de texto sobre la imagen del carrusel
    Posiciona y oculta el texto que aparece en cada elemento del carrusel */
-.item .contenedor21{
+.item .contenedor21 {
     position: absolute;
     top: 50%;
     left: 150px;
@@ -94,23 +98,23 @@
 }
 
 /* Muestra el contenedor de texto para el segundo elemento */
-.slide .item:nth-child(2) .contenedor21{
+.slide .item:nth-child(2) .contenedor21 {
     display: block;
 }
 
 /* Estilo del nombre de la ubicación en el contenedor de texto
    Anima y enfatiza el nombre con tamaño grande y mayúsculas */
-.contenedor21 .name{
+.contenedor21 .name {
     font-size: 30px;
     text-transform: uppercase;
-    font-weight:800;
+    font-weight: 800;
     opacity: 0;
     animation: animate 1s ease-in-out 1 forwards;
 }
 
 /* Estilo de la descripción en el contenedor de texto
    Añade margen y una animación de aparición */
-.contenedor21 .des{
+.contenedor21 .des {
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
@@ -119,7 +123,7 @@
 
 /* Estilo del botón en el contenedor de texto
    Añade padding, cursor y animación para aparecer */
-.contenedor21 button{
+.contenedor21 button {
     padding: 10px 20px;
     border: 1px solid #000000;
     background-color: #ffffffea;
@@ -132,13 +136,13 @@
 /* Animación de aparición para el texto y los botones
    Transforma, difumina y hace que aparezcan suavemente */
 @keyframes animate {
-    from{
+    from {
         opacity: 0;
         transform: translate(0, 100px);
         filter: blur(33px);
     }
 
-    to{
+    to {
         opacity: 1;
         transform: translate(0);
         filter: blur(0);
@@ -165,7 +169,8 @@
     margin: 0 5px;
     border: 1px solid #000;
     transition: 0.3s;
-    position: relative; /* Necesario para los pseudo-elementos */
+    position: relative;
+    /* Necesario para los pseudo-elementos */
 }
 
 /* Flecha izquierda para el botón de navegación previa */
@@ -206,7 +211,7 @@
 .energy-section-interactive {
     margin-top: 50px;
     text-align: center;
-    
+
 }
 
 /* Contenedor principal con efecto de vidrio y movimiento */
@@ -216,7 +221,8 @@
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    background-color: rgba(255, 255, 255, 0.4); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Fondo semitransparente */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -224,10 +230,12 @@
     max-width: 900px;
     width: 90%;
     overflow: hidden;
-    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    backdrop-filter: blur(10px);
+    /* Efecto de vidrio */
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform; /* Optimización de rendimiento */
+    will-change: transform;
+    /* Optimización de rendimiento */
     box-shadow: 0 10px 50px #00000084;
 
 }
@@ -252,7 +260,8 @@
 }
 
 .interactive-container:hover::before {
-    transform: translate(-50%, -50%) scale(1.1); /* Escala al hacer hover */
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Escala al hacer hover */
 }
 
 /* Ajuste de la imagen */
@@ -271,7 +280,8 @@
     border-radius: 30px;
     border: 3px solid transparent;
     transition: transform 0.5s ease;
-    animation: gradient-border 5s linear infinite; /* Animación del borde */
+    animation: gradient-border 5s linear infinite;
+    /* Animación del borde */
 }
 
 /* Hover con transformación 3D */
@@ -284,18 +294,23 @@
     0% {
         border-color: #98782e;
     }
+
     5% {
         border-color: #ffae42;
     }
+
     10% {
         border-color: #8f8105;
     }
+
     25% {
         border-color: #2a5b1b;
     }
+
     80% {
         border-color: #086018;
     }
+
     100% {
         border-color: #2f733b;
     }
@@ -368,19 +383,19 @@
 }
 
 .image-container3 {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 10%;
-    }
-    
-    .responsive-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-        z-index: 1;
-    }
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 10%;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
 
 
 /* Estilo de los tipos de Energía renovable */
@@ -394,30 +409,30 @@
     margin-top: 3%;
     box-shadow: 0 30px 20px #00000029;
 
-    }
-    
-    .card-container {
+}
+
+.card-container {
     display: flex;
     gap: 30px;
     width: 100%;
     justify-content: center;
-    }
-    
-    .card {
+}
+
+.card {
     position: relative;
     list-style: none;
     width: 220px;
     transition: .3s ease;
-    }
-    
-    .card::before {
-    content:"";
+}
+
+.card::before {
+    content: "";
     display: block;
     padding-bottom: 150%;
     width: 100%;
-    }
-    
-    .card-background {
+}
+
+.card-background {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -430,30 +445,30 @@
     transform-origin: bottom;
     transform: scale(1) translateZ(0);
     transition: .3s ease;
-    }
-    
-    .card:hover .card-background {
+}
+
+.card:hover .card-background {
     transform: scale(1.15) translateZ(0);
     background-size: 260px;
-    }
-    
-    .card-container:hover .card:not(:hover) {
+}
+
+.card-container:hover .card:not(:hover) {
     transform: scale(.9);
-    }
-    
-    .card-container:hover > .card:not(:hover) .card-background,
-    card-container:hover > .card:not(:hover) .card-category {
+}
+
+.card-container:hover>.card:not(:hover) .card-background,
+card-container:hover>.card:not(:hover) .card-category {
     filter: brightness(.5) saturate (0) contrast(1.2) blur(20px);
-    }
-    
-    .contenedor {
+}
+
+.contenedor {
     top: 50%;
     left: 0;
     padding: 25px;
     position: absolute;
-    }
+}
 
-    .card-category {
+.card-category {
     color: #fff;
     background-color: #00000016;
     padding: 5px;
@@ -463,14 +478,14 @@
     margin-bottom: 8px;
     text-transform: uppercase;
     font-weight: 100%;
-    }
-    
-    .card-heading {
+}
+
+.card-heading {
     color: #fff;
     font-size: 25px;
     line-height: 1;
     text-shadow: 2px 2px 20px Irgba(0, 0, 0, 2);
-    }
+}
 
 
 /* Estilo del título de la página Energía renovable */
@@ -513,7 +528,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Agrega espacio entre las imágenes */
+    gap: 20px;
+    /* Agrega espacio entre las imágenes */
 }
 
 .map-section {
@@ -522,8 +538,9 @@
     background-color: #fefefe;
     padding: 30px;
     border-radius: 18px;
-    border: 5px solid #2b461b; 
+    border: 5px solid #2b461b;
 }
+
 .map-section:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0px 8px 20px rgba(43, 70, 27, 0.3);
@@ -557,8 +574,10 @@
 }
 
 .map-section img {
-    max-width: 50%; /* Ajusta el ancho máximo al 100% */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 50%;
+    /* Ajusta el ancho máximo al 100% */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
     margin: 20px 0;
 }
 
@@ -585,10 +604,12 @@
     background: linear-gradient(45deg, rgb(111, 128, 16), rgba(26, 113, 5, 0));
     animation: rotate-border 5s linear infinite;
 }
+
 @keyframes rotate-border {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -600,7 +621,7 @@
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
-    color: #273c27; 
+    color: #273c27;
 }
 
 .ranking-section ul {
@@ -620,13 +641,13 @@
     justify-content: center;
     margin: 10px 0;
     gap: 20px;
-    position: relative; 
-    z-index: 10; 
+    position: relative;
+    z-index: 10;
 }
 
 .filter-section label {
     margin-right: 0px;
-    
+
 }
 
 .filter-section select {
@@ -638,7 +659,7 @@
     border: 2px solid #00000086;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
+
 }
 
 .filter-section button {
@@ -657,13 +678,13 @@
     justify-content: center;
     margin: 10px 0;
     gap: 20px;
-    position: relative; 
-    z-index: 10; 
+    position: relative;
+    z-index: 10;
 }
 
 .filter-section2 label {
     margin-right: 0px;
-    
+
 }
 
 .filter-section2 select {
@@ -707,7 +728,7 @@
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.808);
     padding: 2%;
     border-radius: 3%;
-    
+
 }
 
 .content2:hover {
@@ -721,7 +742,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Agrega espacio entre las imágenes */
+    gap: 20px;
+    /* Agrega espacio entre las imágenes */
 }
 
 .map-section2 {
@@ -730,7 +752,7 @@
     background: #f3f3f3;
     padding: 30px;
     border-radius: 18px;
-    border: 5px solid #6c8100; 
+    border: 5px solid #6c8100;
     transition: transform 0.3s ease;
 }
 
@@ -760,8 +782,10 @@
 }
 
 .map-section2 img {
-    max-width: 50%; /* Ajusta el ancho máximo al 100% */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 50%;
+    /* Ajusta el ancho máximo al 100% */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
     margin: 20px 0;
 }
 
@@ -795,7 +819,7 @@
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
-    color: #000000; 
+    color: #000000;
 }
 
 .ranking-section2 ul {
@@ -838,17 +862,17 @@
     margin: 0 10px;
     display: flex;
     align-items: flex-end;
-    transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
-.card12 > .row {
+.card12>.row {
     color: white;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.card12 > .row > .icon12 {
+.card12>.row>.icon12 {
     background: #223;
     color: white;
     border-radius: 10px;
@@ -859,7 +883,7 @@
     margin: 15px;
 }
 
-.card12 > .row > .description12 {
+.card12>.row>.description12 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -885,11 +909,11 @@ input {
     display: none;
 }
 
-input:checked + label {
+input:checked+label {
     width: 600px;
 }
 
-input:checked + label .description12 {
+input:checked+label .description12 {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
@@ -897,18 +921,87 @@ input:checked + label .description12 {
 .card12[for="c1"] {
     background-image: url(/images/image1.jpg);
 }
+
 .card12[for="c2"] {
     background-image: url(/images/image2.jpg);
 }
+
 .card12[for="c3"] {
     background-image: url(/images/image3.jpg);
 }
+
 .card12[for="c4"] {
     background-image: url(/images/image4.webp);
 }
+
 .card12[for="c5"] {
     background-image: url(/images/image5.jpg);
 }
+
 .card12[for="c5"] {
     background-image: url(/images/image6.jpg);
+}
+
+/*** Ema ***/
+
+/* Estilos para el pop-up */
+#my-popover {
+    display: none;
+    /* Ocultar por defecto */
+    position: fixed;
+    /* Posicionarlo sobre el contenido */
+    background-color: white;
+    /* Fondo blanco */
+    border: 1px solid #ccc;
+    /* Borde gris */
+    padding: 10px;
+    /* Espaciado interno */
+    z-index: 1000;
+    /* Asegurarse de que esté sobre otros elementos */
+    width: 70%;
+    /* Ancho del pop-up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para el pop-up */
+    top: 50%;
+    /* Centrar verticalmente */
+    left: 50%;
+    /* Centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajustar el centrado */
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.808);
+
+}
+
+#graf_energy_type {
+    position: relative;
+}
+
+#close-button {
+    /*! Creo que no era necesario el Boton */
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #3d6300;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    left: 42%;
+    bottom: 50px;
+    display: none;
+}
+
+/* Fondo oscurecido */
+#overlay {
+    display: none;
+    /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro con opacidad */
+    z-index: 999;
+    /* Asegurarse de que esté detrás del pop-up */
 }

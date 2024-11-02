@@ -171,7 +171,7 @@
     <!-- -->
     <section class="energy-section">
         <div class="energy-grid">
-            <div class="energy-card">
+            <div class="energy-card" id="solar-card">
                 <h3>Solar</h3>
                 <p>Energía obtenida a partir de la radiación solar. Paneles solares capturan la energía para convertirla
                     en electricidad.</p>
@@ -180,14 +180,8 @@
                     <li>Clima soleado ideal</li>
                     <li>Genera electricidad</li>
                 </ul>
-                <button popovertarget="my-popover"> Open Popover </button>
-
-                <div id="my-popover" popover>
-                    <p>I am a popover with more information. Hit <kbd>esc</kbd> or click away to close me.
-                    <p><!--Pendiente a terminar boton y poopup-->
-                </div>
             </div>
-            <div class="energy-card">
+            <div class="energy-card" id="eolica-card">
                 <h3>Eólica</h3>
                 <p>Energía generada por el movimiento de las turbinas impulsadas por el viento.</p>
                 <ul>
@@ -196,7 +190,7 @@
                     <li>Sin emisiones de carbono</li>
                 </ul>
             </div>
-            <div class="energy-card">
+            <div class="energy-card" id="biomasa-card">
                 <h3>Biomasa</h3>
                 <p>Se obtiene de la materia orgánica, como residuos de cultivos o madera, para generar energía.</p>
                 <ul>
@@ -205,7 +199,7 @@
                     <li>Generación térmica</li>
                 </ul>
             </div>
-            <div class="energy-card">
+            <div class="energy-card" id="geotermica-card">
                 <h3>Geotérmica</h3>
                 <p>Aprovecha el calor interno de la Tierra para producir electricidad o calefacción.</p>
                 <ul>
@@ -214,7 +208,7 @@
                     <li>Eficiente para calefacción</li>
                 </ul>
             </div>
-            <div class="energy-card">
+            <div class="energy-card" id="hidroeléctrica-card">
                 <h3>Hidroeléctrica</h3>
                 <p>La energía del agua en movimiento se usa para generar electricidad.</p>
                 <ul>
@@ -223,6 +217,12 @@
                     <li>Gran capacidad energética</li>
                 </ul>
             </div>
+        </div>
+        <div id="overlay"></div> <!-- Fondo oscuro -->
+
+        <div id="my-popover">
+            <div id="graf_energy_type"></div> <!-- Contenedor del gráfico -->
+            <button id="close-button">Close</button>
         </div>
     </section>
 
@@ -745,7 +745,7 @@
 
     <script src="js/script_global.js"></script>
     <!-- Importo el archivo JS global correspondiente a todas las páginas (Energía renovable, inicio, país, resultados) -->
-    <script src="js/energia.js"></script> <!-- Importo el archivo JS (Pág. Energía renovable)-->
+    <script src="js/new_energia.js"></script> <!-- Importo el archivo JS (Pág. Energía renovable)-->
     <!--script src="js/consultas.js"></script--> <!--*Script para las consultas-->
 
 </body> <!-- CIERRA CUERPO -->
